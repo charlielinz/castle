@@ -16,13 +16,12 @@ const Navbar = () => {
                 <p className="text-2xl mr-1">Castle</p>
               </Link>
             </li>
-            <li></li>
-            <li className="px-8 py-2 bg-gray-100 hover:bg-gray-200 transition-colors duration-300 rounded-lg">
+            {/* <li className="px-8 py-2 bg-gray-100 hover:bg-gray-200 transition-colors duration-300 rounded-lg">
               <Link to="/experience">Code</Link>
             </li>
             <li className="px-8 py-2 bg-gray-100 hover:bg-gray-200 transition-colors duration-300 rounded-lg">
               <Link to="/skills">Record</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
