@@ -46,67 +46,77 @@ const HomeView = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-screen-lg mx-auto px-20">
+      <div className="max-w-sm lg:max-w-screen-lg mx-auto">
         <div className="flex justify-center">
-          <h1 className="py-28 text-4xl">Experience</h1>
+          <h1 className="py-16 lg:py-28 text-4xl">Experience</h1>
         </div>
         <div className="flex flex-col gap-12 mx-auto">
-          <div className="flex">
-            <img
-              src={citiesocialLogo}
-              alt="citiesocial logo"
-              className="w-24"
-            />
-            <div className="py-4 px-8 w-60">
-              <p className="text-xl font-extrabold">QA Specialist</p>
-              <p className="pt-2">citiesocial</p>
+          <div className="flex-wrap lg:flex items-center">
+            <div className="flex w-full lg:w-1/2 px-8 lg:pl-20">
+              <img
+                src={citiesocialLogo}
+                alt="citiesocial logo"
+                className="w-24"
+              />
+              <div className="py-4 px-8 w-60">
+                <p className="text-xl font-extrabold">QA Specialist</p>
+                <p className="pt-2">citiesocial</p>
+              </div>
             </div>
-            <div className="py-2 pl-20 ">
-              <ul>
-                <li className="list-disc list-outside">App & Web QA</li>
-                <li className="list-disc list-outside">
+            <div className="flex pl-12 py-2 lg:w-1/2">
+              <ul className="list-minus list-outside">
+                <li>App & Web QA</li>
+                <li>
                   Manual functional & UI/UX testing
                 </li>
-                <li className="list-disc list-outside">
+                <li>
                   Appium automaion testing with Python
                 </li>
               </ul>
             </div>
           </div>
-          <div className="flex">
-            <img src={iiiLogo} alt="iii logo" className="w-24 p-4" />
-            <div className="py-4 px-8 w-60">
-              <p className="text-xl font-extrabold">Associate Planner</p>
-              <p className="pt-2">III</p>
+          <div className="flex-wrap lg:flex items-center">
+            <div className="flex w-full lg:w-1/2 px-8 lg:pl-20">
+              <img src={iiiLogo} alt="iii logo" className="w-24 px-4" />
+              <div className="py-4 px-8 w-60">
+                <p className="text-xl font-extrabold">Associate Planner</p>
+                <p className="pt-2">III</p>
+              </div>
             </div>
-            <div className="py-2 pl-20 ">
-              <ul>
-                <li className="list-disc list-outside">
+            <div className="flex px-12 py-2 lg:w-1/2">
+              <ul className="list-minus list-outside">
+                <li>
                   Plan and implement the government bid plan
                 </li>
-                <li className="list-disc list-outside">
+                <li>
                   Assist in implementing the income plan
                 </li>
-                <li className="list-disc list-outside">Think tank staff</li>
-                <li className="list-disc list-outside">
+                <li>Think tank staff</li>
+                <li>
                   Event coordinator for Digital Taipei 2020
                 </li>
               </ul>
             </div>
           </div>
-          <div className="flex">
-            <img src={moldex3dLogo} alt="moldex3d logo" className="w-24 p-4" />
-            <div className="py-4 px-8 w-60">
-              <p className="text-xl font-extrabold">QA Engineer</p>
-              <p className="pt-2">Moldex3D</p>
+          <div className="flex-wrap lg:flex items-center">
+            <div className="flex w-full lg:w-1/2 px-8 lg:pl-20">
+              <img
+                src={moldex3dLogo}
+                alt="moldex3d logo"
+                className="w-24 p-4"
+              />
+              <div className="py-4 px-8 w-60">
+                <p className="text-xl font-extrabold">QA Engineer</p>
+                <p className="pt-2">Moldex3D</p>
+              </div>
             </div>
-            <div className="py-2 pl-20 ">
-              <ul>
-                <li className="list-disc list-outside">
+            <div className="flex px-12 py-2 lg:w-1/2">
+              <ul className="list-minus list-outside">
+                <li>
                   Moldex3D software testing
                 </li>
-                <li className="list-disc list-outside">Moldex3D CAE analyst</li>
-                <li className="list-disc list-outside">CAD Engineer</li>
+                <li>Moldex3D CAE analyst</li>
+                <li>CAD Engineer</li>
               </ul>
             </div>
           </div>
