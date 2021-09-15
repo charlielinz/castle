@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomeView from "./components/HomeView";
-import ExperienceView from "./components/ExperienceView";
-import SkillsView from "./components/SkillsView";
-import ProfolioView from "./components/ProfolioView";
+import CodeProjectHolder from "./components/CodeProjectHolder";
+import RecordHolder from "./components/RecordHolder"
 
 const App = () => {
   return (
@@ -13,14 +12,11 @@ const App = () => {
         <Route exact path="/">
           <HomeView />
         </Route>
-        <Route exact path="/experience">
-          <ExperienceView />
+        <Route exact path="/code-project">
+          <CodeProjectHolder />
         </Route>
-        <Route exact path="/skills">
-          <SkillsView />
-        </Route>
-        <Route exact path="/profolio">
-          <ProfolioView />
+        <Route exact path="/record">
+          <RecordHolder />
         </Route>
       </Switch>
     </Router>
