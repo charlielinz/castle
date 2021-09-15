@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomeView from "./components/HomeView";
 import CodeProjectHolder from "./components/CodeProjectHolder";
-import RecordHolder from "./components/RecordHolder"
+import RecordHolder from "./components/RecordHolder";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <RecordHolder />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 };
