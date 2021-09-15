@@ -4,3 +4,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+
+
+.material-icons {
+    display: flex;
+}
+.material-icons-outlined {
+    display: flex;
+}
+.material-icons-round {
+    display: flex;
+}
