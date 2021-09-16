@@ -1,8 +1,8 @@
 const RecordHolder = () => {
     return (
-        <div>
+        <header>
             
-        </div>
+        </header>
     )
 }
 
