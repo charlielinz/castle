@@ -1,7 +1,12 @@
 import selfie from "../img/selfie.png";
-import citiesocialLogo from "../img/citiesocial_logo.svg";
-import iiiLogo from "../img/iii_logo.svg";
-import moldex3dLogo from "../img/moldex3d_logo.svg";
+import citiesocialLogo from "../img/citiesocial-logo.svg";
+import iiiLogo from "../img/iii-logo.svg";
+import moldex3dLogo from "../img/moldex3d-logo.svg";
+import pythonLogo from "../img/python-logo.png";
+import css3Logo from "../img/css3-logo.png";
+import html5Logo from "../img/html5-logo.png";
+import bootstrapLogo from "../img/bootstrap-logo.png";
+import tailwindcssLogo from "../img/tailwindcss-logo.svg";
 
 const HomeView = () => {
   return (
@@ -48,7 +53,7 @@ const HomeView = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-sm mx-auto lg:max-w-screen-lg">
+      <div className="max-w-sm mx-auto mb-20 lg:max-w-screen-lg">
         <div className="flex justify-center">
           <h1 className="py-16 text-4xl lg:py-28">Experience</h1>
         </div>
@@ -108,6 +113,86 @@ const HomeView = () => {
                 <li>Moldex3D CAE analyst</li>
                 <li>CAD Engineer</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="max-w-sm mx-auto lg:max-w-screen-lg">
+        <div className="flex justify-center">
+          <h1 className="py-16 text-4xl lg:py-28">Skills</h1>
+        </div>
+        <div className="flex flex-col gap-4 mx-auto lg:flex-row lg:justify-center lg:gap-12">
+          <div className="lg:flex lg:w-1/3">
+            <div className="mx-8 p-2 border border-gray-300 rounded-lg lg:mx-0">
+              <div className="flex w-full">
+                <img
+                  src={pythonLogo}
+                  alt="python logo"
+                  className="m-2 h-12 w-12"
+                />
+                <div className="py-4 px-2 w-60">
+                  <p className="text-xl font-extrabold">Python</p>
+                </div>
+              </div>
+              <div>
+                <p className="ml-16 px-2 pb-2">
+                  As a self-study programmer, Python is primary programming
+                  language.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:flex lg:w-1/3">
+            <div className="mx-8 p-2 border border-gray-300 rounded-lg lg:mx-0">
+              <div className="flex w-full">
+                <img
+                  src={html5Logo}
+                  alt="html5 logo"
+                  className="m-2 h-12 w-12"
+                />
+                <div className="py-4 px-2 w-60">
+                  <p className="text-xl font-extrabold">HTML</p>
+                </div>
+              </div>
+              <div>
+                <p className="ml-16 px-2 pb-2">
+                  To organize a nice structure on your page, HTML is a must-have
+                  language.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:flex lg:w-1/3">
+            <div className="mx-8 p-2 border border-gray-300 rounded-lg lg:mx-0">
+              <div className="flex w-full">
+                <img src={css3Logo} alt="css3 logo" className="m-2 h-12 w-12" />
+                <div className="py-4 px-2 w-60">
+                  <p className="text-xl font-extrabold">CSS</p>
+                </div>
+              </div>
+              <div>
+                <p className="ml-16 px-2 pb-2">
+                  CSS is your best friend to get HTML elements dressed. I used
+                  to use
+                  <p className="inline-block mr-1">
+                    <img
+                      src={bootstrapLogo}
+                      alt="bootstrap logo"
+                      className="pb-0.5 mr-0.5 h-4 w-4 inline-block"
+                    />
+                    bootstrap
+                  </p>
+                  as my CSS framework, now I'm using
+                  <p className="inline-block">
+                    <img
+                      src={tailwindcssLogo}
+                      alt="tailwindcss logo"
+                      className="pb-0.5 mr-0.5 h-4 w-4 inline-block"
+                    />
+                    tailwindcss.
+                  </p>
+                </p>
+              </div>
             </div>
           </div>
         </div>
