@@ -22,7 +22,7 @@ const HomeView = () => {
             </p>
           </div>
         </div>
-        <div className="max-w-sm mx-auto px-8 py-16 flex flex-wrap-reverse justify-center items-center lg:border-b lg:border-gray-200 lg:gap-20 lg:max-w-screen-lg lg:px-4">
+        <div className="max-w-sm mx-auto px-8 py-16 flex flex-wrap-reverse justify-center items-center border-b border-gray-200 lg:gap-20 lg:max-w-screen-lg lg:px-4">
           <div>
             <h1 className="text-xl">Art & Tech</h1>
             <h1 className="text-xl">Emotional & Rational</h1>
@@ -117,7 +117,7 @@ const HomeView = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-sm mx-auto lg:max-w-screen-lg">
+      <div className="max-w-sm mx-auto px-4 border-t border-gray-200 lg:max-w-screen-lg">
         <div className="flex justify-center">
           <h1 className="py-16 text-4xl lg:py-28">Skills</h1>
         </div>
