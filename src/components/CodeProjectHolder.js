@@ -1,7 +1,6 @@
 const CodeProjectHolder = () => {
     return (
         <div>
-            
         </div>
     )
 }
