@@ -136,7 +136,7 @@ const HomeView = () => {
               </div>
               <div>
                 <p className="ml-16 px-2 pb-2">
-                  As a self-study programmer, Python is primary programming
+                  As a self-study programmer, I choose Python to be my primary programming
                   language.
                 </p>
               </div>
@@ -174,20 +174,20 @@ const HomeView = () => {
                 <p className="ml-16 px-2 pb-2">
                   CSS is your best friend to get HTML elements dressed. I used
                   to use
-                  <p className="inline-block mr-1">
+                  <p className="inline-block mx-1">
                     <img
                       src={bootstrapLogo}
                       alt="bootstrap logo"
-                      className="pb-0.5 mr-0.5 h-4 w-4 inline-block"
+                      className="pb-0.5 mx-0.5 h-4 w-4 inline-block"
                     />
                     bootstrap
                   </p>
                   as my CSS framework, now I'm using
-                  <p className="inline-block">
+                  <p className="inline-block mx-1">
                     <img
                       src={tailwindcssLogo}
                       alt="tailwindcss logo"
-                      className="pb-0.5 mr-0.5 h-4 w-4 inline-block"
+                      className="pb-0.5 mx-0.5 h-4 w-4 inline-block"
                     />
                     tailwindcss.
                   </p>
