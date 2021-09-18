@@ -121,9 +121,9 @@ const HomeView = () => {
         <div className="flex justify-center">
           <h1 className="py-16 text-4xl lg:py-28">Skills</h1>
         </div>
-        <div className="flex flex-col gap-4 mx-auto lg:flex-row lg:justify-center lg:gap-12">
+        <div className="flex flex-col gap-4 mx-auto lg:flex-row lg:justify-center lg:gap-8">
           <div className="lg:flex lg:w-1/3">
-            <div className="mx-8 p-2 border border-gray-300 rounded-lg lg:mx-0">
+            <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
               <div className="flex w-full">
                 <img
                   src={pythonLogo}
@@ -143,12 +143,12 @@ const HomeView = () => {
             </div>
           </div>
           <div className="lg:flex lg:w-1/3">
-            <div className="mx-8 p-2 border border-gray-300 rounded-lg lg:mx-0">
+            <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
               <div className="flex w-full">
                 <img
                   src={html5Logo}
                   alt="html5 logo"
-                  className="m-2 h-12 w-12"
+                  className="my-2 ml-3 mr-1 h-12 w-12"
                 />
                 <div className="py-4 px-2 w-60">
                   <p className="text-xl font-extrabold">HTML</p>
@@ -163,9 +163,9 @@ const HomeView = () => {
             </div>
           </div>
           <div className="lg:flex lg:w-1/3">
-            <div className="mx-8 p-2 border border-gray-300 rounded-lg lg:mx-0">
+            <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
               <div className="flex w-full">
-                <img src={css3Logo} alt="css3 logo" className="m-2 h-12 w-12" />
+                <img src={css3Logo} alt="css3 logo" className="my-2 ml-4 mr-2 h-12 w-12" />
                 <div className="py-4 px-2 w-60">
                   <p className="text-xl font-extrabold">CSS</p>
                 </div>

@@ -1,4 +1,4 @@
-import YoutubeEmbed from "./YoutubeEmbed";
+import YoutubeEmbed from "../utils/YoutubeEmbed";
 
 const Programs = ({ programs }) => {
     return (
