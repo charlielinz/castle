@@ -1,10 +1,11 @@
-import GetWindowWidth from "./GetWindowWidth";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 const YoutubeEmbed = ({ program }) => {
+  const windowWidth = useWindowWidth();
   return (
     <div className="py-2 lg:py-4">
       <p className="py-2 font-thin lg:text-xl lg:py-4">{program.name}</p>
-      {GetWindowWidth() > 1024 ? (
+      {windowWidth > 1024 ? (
         <iframe
           width="560"
           height="315"
