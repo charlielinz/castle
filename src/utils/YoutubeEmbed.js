@@ -14,7 +14,7 @@ const YoutubeEmbed = ({ program }) => {
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-          className="rounded-2xl"
+          className="rounded-xl"
         ></iframe>
       ) : (
         <iframe
@@ -25,7 +25,7 @@ const YoutubeEmbed = ({ program }) => {
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-          className="rounded-xl"
+          className="rounded-lg"
         ></iframe>
       )}
     </div>
