@@ -11,10 +11,10 @@ const YoutubeEmbed = ({ program }) => {
           height="315"
           src={program.url}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          className="rounded-2xl"
+          allowFullScreen
+          className="rounded-xl"
         ></iframe>
       ) : (
         <iframe
@@ -22,10 +22,10 @@ const YoutubeEmbed = ({ program }) => {
           height="160"
           src={program.url}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          className="rounded-xl"
+          allowFullScreen
+          className="rounded-lg"
         ></iframe>
       )}
     </div>

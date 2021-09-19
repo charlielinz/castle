@@ -171,7 +171,7 @@ const HomeView = () => {
                 </div>
               </div>
               <div>
-                <p className="ml-16 px-2 pb-2">
+                <div className="ml-16 px-2 pb-2">
                   CSS is your best friend to get HTML elements dressed. I used
                   to use
                   <p className="inline-block mx-1">
@@ -191,7 +191,7 @@ const HomeView = () => {
                     />
                     tailwindcss.
                   </p>
-                </p>
+                </div>
               </div>
             </div>
           </div>

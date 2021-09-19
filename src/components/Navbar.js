@@ -16,10 +16,10 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="px-4 py-2 text-sm lg:text-lg lg:px-8 lg:py-2 bg-gray-100 hover:bg-gray-200 transition-colors duration-300 rounded-lg">
-            <Link to="/code">Code</Link>
+            <Link to="/code">Codehub</Link>
           </li>
           <li className="px-4 py-2 text-sm lg:text-lg lg:px-8 lg:py-2 bg-gray-100 hover:bg-gray-200 transition-colors duration-300 rounded-lg">
-            <Link to="/record">Record</Link>
+            <Link to="/record">Music Hall</Link>
           </li>
         </ul>
       </div>

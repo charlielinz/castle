@@ -6,6 +6,7 @@ const Programs = ({ programs }) => {
           {programs.map((program) => {
             return (
               <YoutubeEmbed
+                key={program.id}
                 program={program}
               />
             );
