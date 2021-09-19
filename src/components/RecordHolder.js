@@ -25,7 +25,7 @@ const RecordHolder = () => {
     },
   ];
 
-  const chamberMusicPrograms = [
+  const firstChamberMusicPrograms = [
     {
       id: 1,
       name: "F. Poulenc: Trio for Oboe, Bassoon and Piano, FP 43",
@@ -34,16 +34,44 @@ const RecordHolder = () => {
     {
       id: 2,
       name: "J. Francaix: Trio for Oboe, Bassoon and Piano",
-      url: "https://www.youtube-nocookie.com/embed/CnvZ8QWQUpQ"
+      url: "https://www.youtube-nocookie.com/embed/CnvZ8QWQUpQ",
     },
     {
       id: 3,
       name: "A. Previn: Trio for Oboe, Bassoon and Piano",
-      url: "https://www.youtube-nocookie.com/embed/gs9OqtcCQ3Q"
-    }
+      url: "https://www.youtube-nocookie.com/embed/gs9OqtcCQ3Q",
+    },
   ];
 
-  useScrollToTop()
+  const secondChamberMusicPrograms = [
+    {
+      id: 1,
+      name: "F. Schimitt-Sonatine en Trio for Flute, Clarinet and Piano, op.85",
+      url: "https://www.youtube-nocookie.com/embed/q2f3EAjZr2A",
+    },
+    {
+      id: 2,
+      name: "C. Debussy-Prelude to 'Afternoon of of a Faun' for Flute, Clarinet and Piano",
+      url: "https://www.youtube-nocookie.com/embed/ifm3uDmyMQo",
+    },
+    {
+      id: 3,
+      name: "E. Bloch-Concertino for Flute, Clarinet and Piano",
+      url: "https://www.youtube-nocookie.com/embed/RyrPahDjhpw",
+    },
+    {
+      id: 4,
+      name: "M. Emmanuel-Sonata for Flute, Clarinet and Piano, op.11",
+      url: "https://www.youtube-nocookie.com/embed/F7_M9S9-3Is",
+    },
+    {
+      id: 5,
+      name: "B. Rossignal-Suite for Flute, Clarinet and Piano",
+      url: "https://www.youtube-nocookie.com/embed/B3vYgVczn-U",
+    },
+  ];
+
+  useScrollToTop();
 
   return (
     <header className="bg-gray-50 font-san text-gray-900">
@@ -66,7 +94,16 @@ const RecordHolder = () => {
         </p>
       </div>
       <div className="max-w-sm mx-auto pt-4 pb-8 px-4 lg:max-w-screen-lg lg:px-8">
-        <Programs programs={chamberMusicPrograms} />
+        <Programs programs={firstChamberMusicPrograms} />
+      </div>
+      <div className="max-w-sm mx-auto pt-12 px-4 lg:flex lg:gap-4 lg:max-w-screen-lg lg:px-8">
+        <p className="text-lg font-bold lg:text-2xl lg:font-bold">2018.06.03</p>
+        <p className="text-lg font-bold lg:text-2xl lg:font-bold">
+          Chamber Music Recital
+        </p>
+      </div>
+      <div className="max-w-sm mx-auto pt-4 pb-8 px-4 lg:max-w-screen-lg lg:px-8">
+        <Programs programs={secondChamberMusicPrograms} />
       </div>
     </header>
   );
