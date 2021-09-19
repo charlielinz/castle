@@ -4,35 +4,42 @@ import useScrollToTop from "../hooks/useScrollToTop";
 const RecordHolder = () => {
   const soloRecitalPrograms = [
     {
+      id: 1,
       name: "Bach: Prelude and Fugue in C major, BWV 870, from The Well Tempered Clavier Book II",
-      url: "https://www.youtube.com/embed/FxwB1xpeN5k",
+      url: "https://www.youtube-nocookie.com/embed/FxwB1xpeN5k",
     },
     {
+      id: 2,
       name: "Beethoven: Piano Sonata in A-flat Major, Op.26",
-      url: "https://www.youtube.com/embed/FxwB1xpeN5k",
+      url: "https://www.youtube-nocookie.com/embed/FxwB1xpeN5k",
     },
     {
+      id: 3,
       name: "Rachmaninoff: Morceaux de fantaisie, Op.3",
-      url: "https://www.youtube.com/embed/ZH58ImCTOtI",
+      url: "https://www.youtube-nocookie.com/embed/ZH58ImCTOtI",
     },
     {
+      id: 4,
       name: "Schulhoff: Suite Dansante En Jazz, WV.98",
-      url: "https://www.youtube.com/embed/TjekmPU6_-g",
+      url: "https://www.youtube-nocookie.com/embed/TjekmPU6_-g",
     },
   ];
 
   const chamberMusicPrograms = [
     {
+      id: 1,
       name: "F. Poulenc: Trio for Oboe, Bassoon and Piano, FP 43",
-      url: "https://www.youtube.com/embed/8tC-ixacUms",
+      url: "https://www.youtube-nocookie.com/embed/8tC-ixacUms",
     },
     {
+      id: 2,
       name: "J. Francaix: Trio for Oboe, Bassoon and Piano",
-      url: "https://www.youtube.com/embed/CnvZ8QWQUpQ"
+      url: "https://www.youtube-nocookie.com/embed/CnvZ8QWQUpQ"
     },
     {
+      id: 3,
       name: "A. Previn: Trio for Oboe, Bassoon and Piano",
-      url: "https://www.youtube.com/embed/gs9OqtcCQ3Q"
+      url: "https://www.youtube-nocookie.com/embed/gs9OqtcCQ3Q"
     }
   ];
 
