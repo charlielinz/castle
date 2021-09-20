@@ -7,28 +7,28 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <button className="fab fa-facebook text-4xl h-10 w-10 p-0.5"></button>
+          <button className="fab fa-facebook text-4xl h-10 w-10 p-0.5 m-1"></button>
         </a>
         <a
           href="https://www.instagram.com/charlie.linz/"
           target="_blank"
           rel="noreferrer"
         >
-          <button className="fab fa-instagram text-4xl h-10 w-10 p-0.5"></button>
+          <button className="fab fa-instagram text-4xl h-10 w-10 p-0.5 m-1"></button>
         </a>
         <a
           href="https://www.linkedin.com/in/charlie-lin-0a424b117/"
           target="_blank"
           rel="noreferrer"
         >
-          <button className="fab fa-linkedin-in text-4xl h-10 w-10 p-0.5"></button>
+          <button className="fab fa-linkedin-in text-4xl h-10 w-10 p-0.5 m-1"></button>
         </a>
         <a
           href="https://github.com/charlielinz"
           target="_blank"
           rel="noreferrer"
         >
-          <button className="fab fa-github text-4xl h-10 w-10 p-0.5"></button>
+          <button className="fab fa-github text-4xl h-10 w-10 p-0.5 m-1"></button>
         </a>
       </div>
       <p className="text-sm">Copyright &copy; 2021 Charlie</p>
