@@ -10,10 +10,10 @@ const InvisibleHorizon = ({ setIsIntersecting }) => {
         setIsIntersecting(entry.isIntersecting);
       });
     };
-    const obvserver = new IntersectionObserver(callback);
-    obvserver.observe(div);
+    const observer = new IntersectionObserver(callback);
+    observer.observe(div);
     const cleanup = () => {
-      obvserver.disconnect();
+      observer.disconnect();
     };
     return cleanup;
   }, []);
