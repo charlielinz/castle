@@ -1,10 +1,20 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import InvisibleHorizon from "./InvisibleHorizon";
 
 const Navbar = () => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
   return (
     <>
       <nav id="fakeNav" className="bg-gray-50 lg:h-4"></nav>
-      <nav className="bg-gray-50 sticky top-0 z-10 inset-x-0 font-sans text-gray-900">
+      <InvisibleHorizon setIsIntersecting={setIsIntersecting} />
+      <nav
+        className={
+          isIntersecting
+            ? "bg-gray-50 sticky top-0 z-10 inset-x-0 font-sans text-gray-900"
+            : "transition-shadow duration-500 shadow-md bg-gray-50 sticky top-0 z-10 inset-x-0 font-sans text-gray-900"
+        }
+      >
         <div className="max-w-screen-lg mx-auto px-4 py-4 ">
           <ul className="flex justify-end items-center gap-4">
             <li className="mr-auto">

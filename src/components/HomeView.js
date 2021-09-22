@@ -14,7 +14,7 @@ const HomeView = () => {
       <div>
         <div className="max-w-sm mx-auto px-8 pt-28 pb-8 flex justify-center lg:max-w-screen-lg lg:px-4 lg:py-28">
           <div>
-            <p className="text-4xl lg:text-6xl lg:mb-4">
+            <p className="text-3xl lg:text-6xl lg:mb-4">
               Welcome to Charlie's Castle.
             </p>
             <p className="text-sm lg:text-xl text-gray-600">
@@ -26,7 +26,7 @@ const HomeView = () => {
           <div>
             <h1 className="text-xl">Art & Tech</h1>
             <h1 className="text-xl">Emotional & Rational</h1>
-            <h1 className="text-6xl py-8">Charlie Lin</h1>
+            <h1 className="text-5xl py-8 lg:text-6xl">Charlie Lin</h1>
             <p className="flex mb-1">
               <span className="material-icons mr-2">location_on</span>
               <span>Taipei, Taiwan</span>
@@ -48,7 +48,7 @@ const HomeView = () => {
             <img
               src={selfie}
               alt="profile pic"
-              className="h-72 w-72 rounded-full object-cover"
+              className="h-60 w-60 rounded-full object-cover lg:h-72 lg:w-72"
             />
           </div>
         </div>
