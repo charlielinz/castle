@@ -16,7 +16,7 @@ const InvisibleHorizon = ({ setIsIntersecting }) => {
       observer.disconnect();
     };
     return cleanup;
-  }, []);
+  }, [setIsIntersecting]);
 
   return <div ref={divRef}></div>;
 };
