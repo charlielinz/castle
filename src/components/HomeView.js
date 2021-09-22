@@ -7,8 +7,10 @@ import css3Logo from "../img/css3-logo.png";
 import html5Logo from "../img/html5-logo.png";
 import bootstrapLogo from "../img/bootstrap-logo.png";
 import tailwindcssLogo from "../img/tailwindcss-logo.svg";
+import useScrollToAnchor from "../hooks/useScrollToAnchor";
 
 const HomeView = () => {
+  useScrollToAnchor()
   return (
     <header className="bg-gray-50 font-san text-gray-900">
       <div>
