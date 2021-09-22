@@ -1,3 +1,3 @@
 # Charlie Lin
 
-DEMO: https://castle.vercel.app/
+DEMO: https://charlielin.org/
