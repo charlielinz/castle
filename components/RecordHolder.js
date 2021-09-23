@@ -1,5 +1,4 @@
 import Programs from "./Programs";
-import useScrollToAnchor from "../hooks/useScrollToAnchor";
 
 const RecordHolder = () => {
   const soloRecitalPrograms = [
@@ -70,8 +69,6 @@ const RecordHolder = () => {
       url: "https://www.youtube-nocookie.com/embed/B3vYgVczn-U",
     },
   ];
-
-  useScrollToAnchor();
 
   return (
     <header className="bg-gray-50 font-san text-gray-900">

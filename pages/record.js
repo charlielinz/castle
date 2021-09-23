@@ -1,12 +1,12 @@
 import Navbar from "../components/Navbar";
-import HomeView from "../components/HomeView";
+import RecordHolder from "../components/RecordHolder"
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <HomeView />
+      <RecordHolder />
       <Footer />
     </>
   );
