@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const MobileDropdownMenu = ({ isOpened, setIsOpened }) => {
   return (
-    <div className="absolute z-30 transform -translate-x-64 mt-2 text-base">
+    <div className="absolute z-30 transform -translate-x-66 mt-2 text-base">
       <ul
         className={
           isOpened

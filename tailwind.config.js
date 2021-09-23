@@ -11,6 +11,9 @@ module.exports = {
       zIndex: {      
         "-10": "-10",
       },
+      spacing: {
+        "66": "16.5rem"
+      }
     },
     fontFamily: {
       sans: ["Noto Sans", "sans-serif"],
