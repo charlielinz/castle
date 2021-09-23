@@ -3,7 +3,7 @@ import Link from "next/link";
 const WebDropDownMenu = ({ isOpened, setIsOpened }) => {
   return (
     <div
-      className="absolute transform -translate-x-20 mt-6 text-base"
+      className="absolute transform -translate-x-56 mt-6 text-base w-1/3"
       onMouseLeave={() => setIsOpened(false)}
     >
       <ul

@@ -21,9 +21,9 @@ const Navbar = () => {
             : "transition-shadow duration-500 shadow-sm bg-gray-50 sticky top-0 z-10 inset-x-0 font-sans text-gray-900"
         }
       >
-        <div className="max-w-screen-lg mx-auto">
+        <div className="relative max-w-screen-lg mx-auto">
           <ul className="flex justify-end items-center gap-4">
-            <li className="mr-auto p-4">
+            <li className="mr-auto py-4 px-6">
               <span>
                 <Link href="/">
                   <a className="flex items-center gap-2">
@@ -67,9 +67,13 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <li>
+                <li className="mr-3">
                   <a
-                    className="fas fa-stream px-6 py-4 text-xl text-gray-700"
+                    className={
+                      isOpened
+                        ? "relative z-50 fas fa-stream px-4 py-2 text-xl text-gray-700 bg-gray-50 rounded-md transform duration-700 "
+                        : "fas fa-stream px-4 py-2 text-xl text-gray-700"
+                    }
                     onClick={() => setIsOpened(!isOpened)}
                   />
                   <MobileDropdownMenu

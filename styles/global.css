@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
 @import "@fortawesome/fontawesome-free/css/all.css";
 
 .material-icons {
-    display: flex;
+  display: flex;
 }
 .material-icons-outlined {
-    display: flex;
+  display: flex;
 }
 .material-icons-round {
-    display: flex;
+  display: flex;
+}
+html {
+  scroll-behavior: smooth;
 }
