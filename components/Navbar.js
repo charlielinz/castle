@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useState } from "react";
 import InvisibleHorizon from "./InvisibleHorizon";
 import DropdownMenu from "./DropdownMenu";
@@ -21,36 +21,39 @@ const Navbar = () => {
         <div className="max-w-screen-lg mx-auto">
           <ul className="flex justify-end items-center gap-4">
             <li className="mr-auto p-4">
-              <Link to="/" className="flex items-center gap-2">
-                <p>
-                  <span className="material-icons-outlined lg:text-4xl">
-                    castle
-                  </span>
-                </p>
-                <p className="text-xl mr-1 lg:text-3xl lg:mx-1">Castle</p>
-              </Link>
+              <span>
+                <Link href="/">
+                  <a className="flex items-center gap-2">
+                    <span className="material-icons-outlined lg:text-4xl">
+                      castle
+                    </span>
+                    <span className="text-xl mr-1 lg:text-3xl lg:mx-1">
+                      Castle
+                    </span>
+                  </a>
+                </Link>
+              </span>
             </li>
             <li className="py-6">
-              <Link
-                to="/code"
-                className="px-2 text-sm border-b border-gray-50 lg:text-lg lg:px-4 lg:py-1 hover:border-b hover:border-gray-400"
-              >
-                Codehub
-              </Link>
-              <div></div>
+              <span className="px-2 text-sm border-b border-gray-50 lg:text-lg lg:px-4 lg:py-1 hover:border-b hover:border-gray-400">
+                <Link href="/code">
+                  <a>Codehub</a>
+                </Link>
+              </span>
             </li>
             <li
-              className="py-6"
+              className="py-6 "
               onMouseLeave={() => setIsOpened(false)}
               onClick={() => setIsOpened(false)}
             >
-              <Link
-                to="/record"
-                className="px-2 text-sm border-b border-gray-50 lg:text-lg lg:px-4 lg:py-1 hover:border-b hover:border-gray-400"
+              <span
+                className="mr-1 px-2 text-sm border-b border-gray-50 lg:text-lg lg:mr-0 lg:px-4 lg:py-1 hover:border-b hover:border-gray-400"
                 onMouseEnter={() => setIsOpened(true)}
               >
-                Music Hall
-              </Link>
+                <Link href="/record">
+                  <a>Music Hall</a>
+                </Link>
+              </span>
               <DropdownMenu isOpened={isOpened} setIsOpened={setIsOpened} />
             </li>
           </ul>

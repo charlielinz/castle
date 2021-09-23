@@ -1,16 +1,15 @@
-import selfie from "../img/selfie.png";
-import citiesocialLogo from "../img/citiesocial-logo.svg";
-import iiiLogo from "../img/iii-logo.svg";
-import moldex3dLogo from "../img/moldex3d-logo.svg";
-import pythonLogo from "../img/python-logo.png";
-import css3Logo from "../img/css3-logo.png";
-import html5Logo from "../img/html5-logo.png";
-import bootstrapLogo from "../img/bootstrap-logo.png";
-import tailwindcssLogo from "../img/tailwindcss-logo.svg";
-import useScrollToAnchor from "../hooks/useScrollToAnchor";
+import Image from "next/image";
+import selfie from "../public/img/selfie.png";
+import citiesocialLogo from "../public/img/citiesocial-logo.svg";
+import iiiLogo from "../public/img/iii-logo.svg";
+import moldex3dLogo from "../public/img/moldex3d-logo.svg";
+import pythonLogo from "../public/img/python-logo.png";
+import css3Logo from "../public/img/css3-logo.png";
+import html5Logo from "../public/img/html5-logo.png";
+import bootstrapLogo from "../public/img/bootstrap-logo.png";
+import tailwindcssLogo from "../public/img/tailwindcss-logo.svg";
 
 const HomeView = () => {
-  useScrollToAnchor()
   return (
     <header className="bg-gray-50 font-san text-gray-900">
       <div>
@@ -46,11 +45,13 @@ const HomeView = () => {
               <span>Travel, Food, Music</span>
             </p>
           </div>
-          <div className="mb-8">
-            <img
+          <div className="relative mb-8 h-60 w-60 lg:h-72 lg:w-72">
+            <Image
               src={selfie}
               alt="profile pic"
-              className="h-60 w-60 rounded-full object-cover lg:h-72 lg:w-72"
+              layout="fill"
+              objectFit="contain"
+              className="rounded-full"
             />
           </div>
         </div>
@@ -62,11 +63,9 @@ const HomeView = () => {
         <div className="flex flex-col gap-12 mx-auto">
           <div className="flex-wrap items-center lg:flex">
             <div className="flex w-full px-8 lg:w-1/2 lg:pl-28">
-              <img
-                src={citiesocialLogo}
-                alt="citiesocial logo"
-                className="w-24"
-              />
+              <div className="relative w-24">
+                <Image src={citiesocialLogo} alt="citiesocial logo" />
+              </div>
               <div className="py-4 px-8 w-60">
                 <p className="text-xl font-extrabold">QA Specialist</p>
                 <p className="pt-2">citiesocial</p>
@@ -82,7 +81,9 @@ const HomeView = () => {
           </div>
           <div className="flex-wrap items-center lg:flex">
             <div className="flex w-full px-8 lg:w-1/2 lg:pl-28">
-              <img src={iiiLogo} alt="iii logo" className="w-24 px-4" />
+              <div className="relative w-24 px-4 pt-4">
+                <Image src={iiiLogo} alt="iii logo" />
+              </div>
               <div className="py-4 px-8 w-60">
                 <p className="text-xl font-extrabold">Associate Planner</p>
                 <p className="pt-2">III</p>
@@ -99,11 +100,9 @@ const HomeView = () => {
           </div>
           <div className="flex-wrap items-center lg:flex">
             <div className="flex w-full px-8 lg:w-1/2 lg:pl-28">
-              <img
-                src={moldex3dLogo}
-                alt="moldex3d logo"
-                className="w-24 p-4"
-              />
+              <div className="relative w-24 p-4">
+                <Image src={moldex3dLogo} alt="moldex3d logo" />
+              </div>
               <div className="py-4 px-8 w-60">
                 <p className="text-xl font-extrabold">QA Engineer</p>
                 <p className="pt-2">Moldex3D</p>
@@ -127,19 +126,17 @@ const HomeView = () => {
           <div className="lg:flex lg:w-1/3">
             <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
               <div className="flex w-full">
-                <img
-                  src={pythonLogo}
-                  alt="python logo"
-                  className="m-2 h-12 w-12"
-                />
-                <div className="py-4 px-2 w-60">
+                <div className="m-2 h-12 w-12">
+                  <Image src={pythonLogo} alt="python logo" />
+                </div>
+                <div className="py-4 px-2">
                   <p className="text-xl font-extrabold">Python</p>
                 </div>
               </div>
               <div>
                 <p className="ml-16 px-2 pb-2">
-                  As a self-study programmer, I choose Python to be my primary programming
-                  language.
+                  As a self-study programmer, I choose Python to be my primary
+                  programming language.
                 </p>
               </div>
             </div>
@@ -147,12 +144,10 @@ const HomeView = () => {
           <div className="lg:flex lg:w-1/3">
             <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
               <div className="flex w-full">
-                <img
-                  src={html5Logo}
-                  alt="html5 logo"
-                  className="my-2 ml-3 mr-1 h-12 w-12"
-                />
-                <div className="py-4 px-2 w-60">
+                <div className="my-2 ml-3 mr-1 h-12 w-12">
+                  <Image src={html5Logo} alt="html5 logo" />
+                </div>
+                <div className="py-4 px-2">
                   <p className="text-xl font-extrabold">HTML</p>
                 </div>
               </div>
@@ -167,8 +162,15 @@ const HomeView = () => {
           <div className="lg:flex lg:w-1/3">
             <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
               <div className="flex w-full">
-                <img src={css3Logo} alt="css3 logo" className="my-2 ml-4 mr-2 h-12 w-12" />
-                <div className="py-4 px-2 w-60">
+                <div className="relative my-2 ml-2 mr-2 h-12 w-12">
+                  <Image
+                    src={css3Logo}
+                    alt="css3 logo"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
+                <div className="py-4 px-2">
                   <p className="text-xl font-extrabold">CSS</p>
                 </div>
               </div>
@@ -176,23 +178,24 @@ const HomeView = () => {
                 <div className="ml-16 px-2 pb-2">
                   CSS is your best friend to get HTML elements dressed. I used
                   to use
-                  <p className="inline-block mx-1">
-                    <img
+                  <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
+                    <Image
                       src={bootstrapLogo}
                       alt="bootstrap logo"
-                      className="pb-0.5 mx-0.5 h-4 w-4 inline-block"
+                      layout="fill"
+                      objectFit="contain"
                     />
-                    bootstrap
-                  </p>
-                  as my CSS framework, now I'm using
-                  <p className="inline-block mx-1">
-                    <img
+                  </div>
+                  bootstrap as my CSS framework, now I'm using
+                  <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
+                    <Image
                       src={tailwindcssLogo}
                       alt="tailwindcss logo"
-                      className="pb-0.5 mx-0.5 h-4 w-4 inline-block"
+                      layout="fill"
+                      objectFit="contain"
                     />
-                    tailwindcss.
-                  </p>
+                  </div>
+                  tailwindcss.
                 </div>
               </div>
             </div>
