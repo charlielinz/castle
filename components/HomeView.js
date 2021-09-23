@@ -51,7 +51,7 @@ const HomeView = () => {
               alt="profile pic"
               layout="fill"
               objectFit="contain"
-              className="rounded-full"
+              className="rounded-full z-0"
             />
           </div>
         </div>

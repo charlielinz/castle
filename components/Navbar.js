@@ -1,15 +1,18 @@
 import Link from "next/link";
 import { useState } from "react";
 import InvisibleHorizon from "./InvisibleHorizon";
-import DropdownMenu from "./DropdownMenu";
+import WebDropdownMenu from "./WebDropdownMenu";
+import useWindowWidth from "../hooks/useWindowWidth";
+import MobileDropdownMenu from "./MobileDropdownMenu";
+import Mask from "./Mask";
 
 const Navbar = () => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
-
+  const windowWidth = useWindowWidth();
   return (
     <>
-      <nav id="fakeNav" className="bg-gray-50 lg:h-4"></nav>
+      <nav id="fakeNav" className="h-2 bg-gray-50 lg:h-4"></nav>
       <InvisibleHorizon setIsIntersecting={setIsIntersecting} />
       <nav
         className={
@@ -34,28 +37,49 @@ const Navbar = () => {
                 </Link>
               </span>
             </li>
-            <li className="py-6">
-              <span className="px-2 text-sm border-b border-gray-50 lg:text-lg lg:px-4 lg:py-1 hover:border-b hover:border-gray-400">
-                <Link href="/code">
-                  <a>Codehub</a>
-                </Link>
-              </span>
-            </li>
-            <li
-              className="py-6 "
-              onMouseLeave={() => setIsOpened(false)}
-              onClick={() => setIsOpened(false)}
-            >
-              <span
-                className="mr-1 px-2 text-sm border-b border-gray-50 lg:text-lg lg:mr-0 lg:px-4 lg:py-1 hover:border-b hover:border-gray-400"
-                onMouseEnter={() => setIsOpened(true)}
-              >
-                <Link href="/record">
-                  <a>Music Hall</a>
-                </Link>
-              </span>
-              <DropdownMenu isOpened={isOpened} setIsOpened={setIsOpened} />
-            </li>
+            {windowWidth > 1024 ? (
+              <>
+                <li className="py-6">
+                  <span className="px-2 text-sm border-b border-gray-50 lg:text-lg lg:px-4 lg:py-1 hover:border-b hover:border-gray-400">
+                    <Link href="/code">
+                      <a>Code hub</a>
+                    </Link>
+                  </span>
+                </li>
+                <li
+                  className="py-6 "
+                  onMouseLeave={() => setIsOpened(false)}
+                  onClick={() => setIsOpened(false)}
+                >
+                  <span
+                    className="mr-1 px-2 text-sm border-b border-gray-50 lg:text-lg lg:mr-0 lg:px-4 lg:py-1 hover:border-b hover:border-gray-400"
+                    onMouseEnter={() => setIsOpened(true)}
+                  >
+                    <Link href="/record">
+                      <a>Music Hall</a>
+                    </Link>
+                  </span>
+                  <WebDropdownMenu
+                    isOpened={isOpened}
+                    setIsOpened={setIsOpened}
+                  />
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <a
+                    className="fas fa-stream px-6 py-4 text-xl text-gray-700"
+                    onClick={() => setIsOpened(!isOpened)}
+                  />
+                  <MobileDropdownMenu
+                    isOpened={isOpened}
+                    setIsOpened={setIsOpened}
+                  />
+                  <Mask isOpened={isOpened} setIsOpened={setIsOpened} />
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </nav>

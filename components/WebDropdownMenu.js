@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const DropDownMenu = ({ isOpened, setIsOpened }) => {
+const WebDropDownMenu = ({ isOpened, setIsOpened }) => {
   return (
     <div
       className="absolute transform -translate-x-20 mt-6 text-base"
@@ -42,4 +42,4 @@ const DropDownMenu = ({ isOpened, setIsOpened }) => {
   );
 };
 
-export default DropDownMenu;
+export default WebDropDownMenu;

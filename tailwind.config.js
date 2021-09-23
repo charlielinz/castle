@@ -19,6 +19,12 @@ module.exports = {
       square: "square",
       minus: "'-  '",
     },
+    zIndex: {
+      "10": "10",
+      "20": "20",
+      "30": "30",
+      "-10": "-10",
+    },
   },
   variants: {
     extend: {},
