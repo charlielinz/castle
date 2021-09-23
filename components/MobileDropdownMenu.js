@@ -27,7 +27,7 @@ const MobileDropdownMenu = ({ isOpened, setIsOpened }) => {
         <ul className="px-4 py-2">
           <li className="px-2 py-2 text-base rounded-sm">
             <span onClick={() => setIsOpened(false)}>
-              <Link href="/record#piano-solo-recital">
+              <Link href="/record#piano-solo-recital" >
                 <a>
                   <p>2019.06.18</p>
                   <p>Piano Recital</p>
@@ -37,7 +37,7 @@ const MobileDropdownMenu = ({ isOpened, setIsOpened }) => {
           </li>
           <li className="px-2 py-2 text-base rounded-sm">
             <span onClick={() => setIsOpened(false)}>
-              <Link href="/record#chamber-music-recital-1">
+              <Link href="/record#chamber-music-recital-1" >
                 <a>
                   <p>2018.06.23</p>
                   <p>Chamber Music Recital</p>
@@ -47,7 +47,7 @@ const MobileDropdownMenu = ({ isOpened, setIsOpened }) => {
           </li>
           <li className="px-2 py-2 text-base rounded-sm">
             <span onClick={() => setIsOpened(false)}>
-              <Link href="/record#chamber-music-recital-2">
+              <Link href="/record#chamber-music-recital-2" >
                 <a>
                   <p>2018.06.03</p>
                   <p>Chamber Music Recital</p>
