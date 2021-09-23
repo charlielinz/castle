@@ -9,8 +9,7 @@ const useScrollToAnchor = () => {
       window.scrollTo(0, 0);
     } else {
       setTimeout(() => {
-        const id = hash.replace("#", "");
-        const el = document.getElementById(id);
+        const el = document.querySelector(hash)
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
         }
