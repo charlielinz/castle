@@ -144,7 +144,7 @@ const HomeView = () => {
           <div className="lg:flex lg:w-1/3">
             <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
               <div className="flex w-full">
-                <div className="my-2 ml-3 mr-1 h-12 w-12">
+                <div className="m-2 h-12 w-12">
                   <Image src={html5Logo} alt="html5 logo" />
                 </div>
                 <div className="py-4 px-2">
@@ -162,7 +162,7 @@ const HomeView = () => {
           <div className="lg:flex lg:w-1/3">
             <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
               <div className="flex w-full">
-                <div className="relative my-2 ml-2 mr-2 h-12 w-12">
+                <div className="relative m-2 h-12 w-12">
                   <Image
                     src={css3Logo}
                     alt="css3 logo"
