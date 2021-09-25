@@ -123,81 +123,64 @@ const HomeView = () => {
           <h1 className="py-16 text-4xl lg:py-28">Skills</h1>
         </div>
         <div className="flex flex-col gap-4 mx-auto lg:flex-row lg:justify-center lg:gap-8">
-          <div className="lg:flex lg:w-1/3">
-            <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
-              <div className="flex w-full">
-                <div className="m-2 h-12 w-12">
-                  <Image src={pythonLogo} alt="python logo" />
-                </div>
-                <div className="py-4 px-2">
-                  <p className="text-xl font-extrabold">Python</p>
-                </div>
-              </div>
-              <div>
-                <p className="ml-16 px-2 pb-2">
-                  As a self-study programmer, I choose Python to be my primary
-                  programming language.
-                </p>
-              </div>
+          <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 lg:grid-cols-4 lg:py-10 lg:px-8 lg:w-1/3">
+            <div className="h-12 w-12">
+              <i className="fab fa-python text-5xl text-yellow-400" />
+            </div>
+            <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
+              <p className="text-xl font-extrabold">Python</p>
+            </div>
+            <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
+              <p>
+                As a self-study programmer, I choose Python to be my primary
+                programming language.
+              </p>
             </div>
           </div>
-          <div className="lg:flex lg:w-1/3">
-            <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
-              <div className="flex w-full">
-                <div className="m-2 h-12 w-12">
-                  <Image src={html5Logo} alt="html5 logo" />
-                </div>
-                <div className="py-4 px-2">
-                  <p className="text-xl font-extrabold">HTML</p>
-                </div>
-              </div>
-              <div>
-                <p className="ml-16 px-2 pb-2">
-                  To organize a nice structure on your page, HTML is a must-have
-                  language.
-                </p>
-              </div>
+          <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 lg:grid-cols-4 lg:py-10 lg:px-8 lg:w-1/3">
+            <div className="h-12 w-12">
+              <i className="fab fa-html5 text-5xl text-yellow-600" />
+            </div>
+            <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
+              <p className="text-xl font-extrabold">HTML</p>
+            </div>
+            <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
+              <p>
+                To organize a nice structure on your page, HTML is a must-have
+                language.
+              </p>
             </div>
           </div>
-          <div className="lg:flex lg:w-1/3">
-            <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
-              <div className="flex w-full">
-                <div className="relative m-2 h-12 w-12">
+          <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 lg:grid-cols-4 lg:py-10 lg:px-8 lg:w-1/3">
+            <div className="h-12 w-12">
+              <i className="fab fa-css3-alt text-5xl text-blue-600" />
+            </div>
+            <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
+              <p className="text-xl font-extrabold">CSS</p>
+            </div>
+            <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
+              <p>
+                CSS is your best friend to get HTML elements dressed. I used to
+                use
+                <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
                   <Image
-                    src={css3Logo}
-                    alt="css3 logo"
+                    src={bootstrapLogo}
+                    alt="bootstrap logo"
                     layout="fill"
                     objectFit="contain"
                   />
                 </div>
-                <div className="py-4 px-2">
-                  <p className="text-xl font-extrabold">CSS</p>
+                bootstrap as my CSS framework, now I'm using
+                <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
+                  <Image
+                    src={tailwindcssLogo}
+                    alt="tailwindcss logo"
+                    layout="fill"
+                    objectFit="contain"
+                  />
                 </div>
-              </div>
-              <div>
-                <div className="ml-16 px-2 pb-2">
-                  CSS is your best friend to get HTML elements dressed. I used
-                  to use
-                  <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
-                    <Image
-                      src={bootstrapLogo}
-                      alt="bootstrap logo"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-                  bootstrap as my CSS framework, now I'm using
-                  <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
-                    <Image
-                      src={tailwindcssLogo}
-                      alt="tailwindcss logo"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-                  tailwindcss.
-                </div>
-              </div>
+                tailwindcss.
+              </p>
             </div>
           </div>
         </div>
