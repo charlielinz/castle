@@ -119,65 +119,71 @@ const HomeView = () => {
         <div className="flex justify-center">
           <h1 className="py-16 text-4xl lg:py-28">Skills</h1>
         </div>
-        <div className="flex flex-col gap-4 mx-auto lg:flex-row lg:justify-center lg:gap-8">
-          <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 lg:grid-cols-4 lg:px-8 lg:w-1/3">
-            <div className="h-12 w-12">
-              <i className="fab fa-python text-5xl text-yellow-400" />
-            </div>
-            <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
-              <p className="text-xl font-extrabold">Python</p>
-            </div>
-            <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
-              <p>
-                As a self-study programmer, I choose Python to be my primary
-                programming language.
-              </p>
-            </div>
-          </div>
-          <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 lg:grid-cols-4 lg:px-8 lg:w-1/3">
-            <div className="h-12 w-12">
-              <i className="fab fa-html5 text-5xl text-yellow-600" />
-            </div>
-            <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
-              <p className="text-xl font-extrabold">HTML</p>
-            </div>
-            <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
-              <p>
-                To organize a nice structure on your page, HTML is a must-have
-                language.
-              </p>
+        <div className="flex flex-col flex-wrap mx-auto lg:flex-row lg:justify-center">
+          <div className="lg:w-1/3 lg:flex lg:items-stretch">
+            <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
+              <div className="h-12 w-12">
+                <i className="fab fa-python text-5xl text-yellow-400" />
+              </div>
+              <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
+                <p className="text-xl font-extrabold">Python</p>
+              </div>
+              <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
+                <p>
+                  As a self-study programmer, I choose Python to be my primary
+                  programming language.
+                </p>
+              </div>
             </div>
           </div>
-          <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 lg:grid-cols-4 lg:px-8 lg:w-1/3">
-            <div className="h-12 w-12">
-              <i className="fab fa-css3-alt text-5xl text-blue-600" />
+          <div className="lg:w-1/3 lg:flex lg:items-stretch">
+            <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
+              <div className="h-12 w-12">
+                <i className="fab fa-html5 text-5xl text-yellow-600" />
+              </div>
+              <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
+                <p className="text-xl font-extrabold">HTML</p>
+              </div>
+              <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
+                <p>
+                  To organize a nice structure on your page, HTML is a must-have
+                  language.
+                </p>
+              </div>
             </div>
-            <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
-              <p className="text-xl font-extrabold">CSS</p>
-            </div>
-            <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
-              <p>
-                CSS is your best friend to get HTML elements dressed. I used to
-                use
-                <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
-                  <Image
-                    src={bootstrapLogo}
-                    alt="bootstrap logo"
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </div>
-                bootstrap as my CSS framework, now I'm using
-                <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
-                  <Image
-                    src={tailwindcssLogo}
-                    alt="tailwindcss logo"
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </div>
-                tailwindcss.
-              </p>
+          </div>
+          <div className="lg:w-1/3 lg:flex lg:items-stretch">
+            <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
+              <div className="h-12 w-12">
+                <i className="fab fa-css3-alt text-5xl text-blue-600" />
+              </div>
+              <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
+                <p className="text-xl font-extrabold">CSS</p>
+              </div>
+              <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
+                <p>
+                  CSS is your best friend to get HTML elements dressed. I used
+                  to use
+                  <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
+                    <Image
+                      src={bootstrapLogo}
+                      alt="bootstrap logo"
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </div>
+                  bootstrap as my CSS framework, now I'm using
+                  <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
+                    <Image
+                      src={tailwindcssLogo}
+                      alt="tailwindcss logo"
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </div>
+                  tailwindcss.
+                </p>
+              </div>
             </div>
           </div>
         </div>

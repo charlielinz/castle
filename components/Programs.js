@@ -1,18 +1,13 @@
-import YoutubeEmbed from "../utils/YoutubeEmbed";
+import YoutubeEmbed from "./YoutubeEmbed";
 
 const Programs = ({ programs }) => {
-    return (
-        <>
-          {programs.map((program) => {
-            return (
-              <YoutubeEmbed
-                key={program.id}
-                program={program}
-              />
-            );
-          })}
-        </>
-      );
-    }
+  return (
+    <>
+      {programs.map((program) => {
+        return <YoutubeEmbed key={program.id} program={program} />;
+      })}
+    </>
+  );
+};
 
-export default Programs
+export default Programs;
