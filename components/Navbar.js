@@ -4,7 +4,6 @@ import InvisibleHorizon from "./InvisibleHorizon";
 import WebDropdownMenu from "./WebDropdownMenu";
 import useWindowWidth from "../hooks/useWindowWidth";
 import MobileDropdownMenu from "./MobileDropdownMenu";
-import Mask from "./Mask";
 
 const Navbar = () => {
   const [isIntersecting, setIsIntersecting] = useState(false);
@@ -39,6 +38,13 @@ const Navbar = () => {
             </li>
             {windowWidth > 1024 ? (
               <>
+                <li className="py-6">
+                  <span className="px-2 text-sm border-b border-gray-50 lg:text-lg lg:px-4 lg:py-1 hover:border-b hover:border-gray-400">
+                    <Link href="/posts">
+                      <a>Blog</a>
+                    </Link>
+                  </span>
+                </li>
                 <li className="py-6">
                   <span className="px-2 text-sm border-b border-gray-50 lg:text-lg lg:px-4 lg:py-1 hover:border-b hover:border-gray-400">
                     <Link href="/code">
@@ -80,7 +86,14 @@ const Navbar = () => {
                     isOpened={isOpened}
                     setIsOpened={setIsOpened}
                   />
-                  <Mask isOpened={isOpened} setIsOpened={setIsOpened} />
+                  <button
+                    className={
+                      isOpened
+                        ? "z-20 fixed bg-black h-full w-full top-0 bottom-0 left-0 right-0 opacity-60 transform duration-300 cursor-default"
+                        : "z-20 invisible fixed bg-black h-full w-full top-0 bottom-0 left-0 right-0 opacity-0 transform duration-300 cursor-default"
+                    }
+                    onClick={() => setIsOpened(false)}
+                  ></button>
                 </li>
               </>
             )}

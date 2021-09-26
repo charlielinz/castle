@@ -3,9 +3,6 @@ import selfie from "../public/img/selfie.png";
 import citiesocialLogo from "../public/img/citiesocial-logo.svg";
 import iiiLogo from "../public/img/iii-logo.svg";
 import moldex3dLogo from "../public/img/moldex3d-logo.svg";
-import pythonLogo from "../public/img/python-logo.png";
-import css3Logo from "../public/img/css3-logo.png";
-import html5Logo from "../public/img/html5-logo.png";
 import bootstrapLogo from "../public/img/bootstrap-logo.png";
 import tailwindcssLogo from "../public/img/tailwindcss-logo.svg";
 
@@ -45,7 +42,7 @@ const HomeView = () => {
               <span>Travel, Food, Music</span>
             </p>
           </div>
-          <div className="relative mb-8 h-60 w-60 lg:h-72 lg:w-72">
+          <div className="relative mb-8 h-60 w-60 lg:h-72 lg:w-72 lg:mb-0">
             <Image
               src={selfie}
               alt="profile pic"
@@ -122,60 +119,49 @@ const HomeView = () => {
         <div className="flex justify-center">
           <h1 className="py-16 text-4xl lg:py-28">Skills</h1>
         </div>
-        <div className="flex flex-col gap-4 mx-auto lg:flex-row lg:justify-center lg:gap-8">
-          <div className="lg:flex lg:w-1/3">
-            <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
-              <div className="flex w-full">
-                <div className="m-2 h-12 w-12">
-                  <Image src={pythonLogo} alt="python logo" />
-                </div>
-                <div className="py-4 px-2">
-                  <p className="text-xl font-extrabold">Python</p>
-                </div>
+        <div className="flex flex-col flex-wrap mx-auto lg:flex-row lg:justify-center">
+          <div className="lg:w-1/3 lg:flex lg:items-stretch">
+            <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
+              <div className="h-12 w-12">
+                <i className="fab fa-python text-5xl text-yellow-400" />
               </div>
-              <div>
-                <p className="ml-16 px-2 pb-2">
+              <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
+                <p className="text-xl font-extrabold">Python</p>
+              </div>
+              <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
+                <p>
                   As a self-study programmer, I choose Python to be my primary
                   programming language.
                 </p>
               </div>
             </div>
           </div>
-          <div className="lg:flex lg:w-1/3">
-            <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
-              <div className="flex w-full">
-                <div className="m-2 h-12 w-12">
-                  <Image src={html5Logo} alt="html5 logo" />
-                </div>
-                <div className="py-4 px-2">
-                  <p className="text-xl font-extrabold">HTML</p>
-                </div>
+          <div className="lg:w-1/3 lg:flex lg:items-stretch">
+            <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
+              <div className="h-12 w-12">
+                <i className="fab fa-html5 text-5xl text-yellow-600" />
               </div>
-              <div>
-                <p className="ml-16 px-2 pb-2">
+              <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
+                <p className="text-xl font-extrabold">HTML</p>
+              </div>
+              <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
+                <p>
                   To organize a nice structure on your page, HTML is a must-have
                   language.
                 </p>
               </div>
             </div>
           </div>
-          <div className="lg:flex lg:w-1/3">
-            <div className="p-4 bg-gray-100 rounded-lg lg:mx-0 lg:pl-3 lg:pr-8 lg:py-6">
-              <div className="flex w-full">
-                <div className="relative m-2 h-12 w-12">
-                  <Image
-                    src={css3Logo}
-                    alt="css3 logo"
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </div>
-                <div className="py-4 px-2">
-                  <p className="text-xl font-extrabold">CSS</p>
-                </div>
+          <div className="lg:w-1/3 lg:flex lg:items-stretch">
+            <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
+              <div className="h-12 w-12">
+                <i className="fab fa-css3-alt text-5xl text-blue-600" />
               </div>
-              <div>
-                <div className="ml-16 px-2 pb-2">
+              <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
+                <p className="text-xl font-extrabold">CSS</p>
+              </div>
+              <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
+                <p>
                   CSS is your best friend to get HTML elements dressed. I used
                   to use
                   <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
@@ -196,7 +182,7 @@ const HomeView = () => {
                     />
                   </div>
                   tailwindcss.
-                </div>
+                </p>
               </div>
             </div>
           </div>
