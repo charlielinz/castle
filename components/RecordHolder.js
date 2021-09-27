@@ -7,7 +7,7 @@ const RecordHolder = () => {
     <header className="bg-gray-50 font-san text-gray-900">
       <div className="max-w-sm mx-auto px-8 pt-20 pb-12 flex justify-center lg:max-w-screen-lg lg:px-4 lg:py-28">
         <p className="text-3xl lg:font-black lg:text-4xl">
-          Enjoy my recital here.
+          Listen to me.
         </p>
       </div>
       {recitalList.map((recital, index) => {

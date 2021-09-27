@@ -6,7 +6,7 @@ const CodeProjectHolder = () => {
     <header className="bg-gray-50 font-san text-gray-900">
       <div className="max-w-sm mx-auto px-8 pt-20 pb-12 flex justify-center lg:max-w-screen-lg lg:px-4 lg:py-28">
         <p className="text-3xl lg:font-black lg:text-4xl">
-          Here are my profolios in coding.
+          Learn from me.
         </p>
       </div>
       <div className="max-w-sm mx-auto px-8 pt-12 pb-12 lg:max-w-screen-lg lg:px-4 lg:py-28">
