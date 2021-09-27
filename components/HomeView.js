@@ -15,7 +15,7 @@ const HomeView = () => {
             <p className="text-3xl lg:text-6xl lg:mb-4">
               Welcome to Charlie's Castle.
             </p>
-            <p className="text-sm lg:text-xl text-gray-600">
+            <p className="text-sm pt-2 lg:text-xl text-gray-600">
               You can find my legacy here, enjoy yourself !
             </p>
           </div>
