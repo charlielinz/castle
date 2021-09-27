@@ -28,7 +28,7 @@ const Postpage = ({
               />
             </div>
             <p
-              className="lg:row-start-2 lg:p-4"
+              className="p-4 lg:row-start-2 lg:p-4"
               dangerouslySetInnerHTML={{ __html: marked(content) }}
             ></p>
           </div>
