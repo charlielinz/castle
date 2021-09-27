@@ -19,7 +19,10 @@ const Post = ({ postinfos }) => {
                   objectFit="contain"
                 />
               </div>
-              <p className="pb-2">{post.frontmatter.title}</p>
+              <p className="pb-2">
+                <span>{post.frontmatter.title}</span>
+                <span className="ml-4 text-sm">{post.frontmatter.tag}</span>
+              </p>
               <p className="pb-4">Traveled in {post.frontmatter.date}</p>
               <span className="text-sm bg-gray-200 py-1 px-3 rounded-md hover:bg-gray-300 hover:font-extrabold transition duration-300">
                 <Link href={`/blog/${post.slug}`}>
