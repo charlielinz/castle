@@ -1,3 +1,5 @@
+const { list } = require("postcss");
+
 module.exports = {
   mode: "jit",
   purge: [
@@ -60,8 +62,12 @@ module.exports = {
             p: {
               margin: theme("margin.0"),
               img: {
-                margin: theme("margin.0")
-              }
+                marginTop: theme("margin.2"),
+              },
+              span: {
+                display: "list-item",
+                listStylePosition: "inside",
+              },
             },
           },
         },
