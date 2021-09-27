@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import HomeView from "../components/HomeView";
 import Footer from "../components/Footer";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Navbar />
@@ -10,4 +10,6 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
+
+export default Home;
