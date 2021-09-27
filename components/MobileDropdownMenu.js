@@ -12,6 +12,13 @@ const MobileDropdownMenu = ({ isOpened, setIsOpened }) => {
       >
         <li className="flex p-2 text-xl rounded-sm">
           <span className="w-full" onClick={() => setIsOpened(false)}>
+            <Link href="/blog/posts" className="w-full">
+              <a>Blog</a>
+            </Link>
+          </span>
+        </li>
+        <li className="flex p-2 text-xl rounded-sm">
+          <span className="w-full" onClick={() => setIsOpened(false)}>
             <Link href="/code" className="w-full">
               <a>Code Hub</a>
             </Link>

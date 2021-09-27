@@ -1,8 +1,8 @@
 import Navbar from "../components/Navbar";
-import CodeProjectHolder from "../components/CodeProjectHolder"
+import CodeProjectHolder from "../components/CodeProjectHolder";
 import Footer from "../components/Footer";
 
-export default function Home() {
+const Code = () => {
   return (
     <>
       <Navbar />
@@ -10,4 +10,6 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
+
+export default Code;

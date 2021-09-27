@@ -1,8 +1,8 @@
 import Navbar from "../components/Navbar";
-import RecordHolder from "../components/RecordHolder"
+import RecordHolder from "../components/RecordHolder";
 import Footer from "../components/Footer";
 
-export default function Home() {
+const Record = () => {
   return (
     <>
       <Navbar />
@@ -10,4 +10,6 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
+
+export default Record;

@@ -40,7 +40,7 @@ const Navbar = () => {
               <>
                 <li className="py-6">
                   <span className="px-2 text-sm border-b border-gray-50 lg:text-lg lg:px-4 lg:py-1 hover:border-b hover:border-gray-400">
-                    <Link href="/posts">
+                    <Link href="/blog/posts">
                       <a>Blog</a>
                     </Link>
                   </span>
