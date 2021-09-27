@@ -34,7 +34,7 @@ const Postpage = ({
                 img({ src, title }) {
                   return (
                     <>
-                      <span className="block">{title}</span>
+                      <span className="text-sm">{title}</span>
                       <img src={src} className="inline w-auto lg:h-64" />
                     </>
                   );
