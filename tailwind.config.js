@@ -6,6 +6,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./hooks/**/*.{js,ts,jsx,tsx}",
+    "./posts/**/*.{js,ts,jsx,tsx}",    
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -30,48 +31,6 @@ module.exports = {
         "span-11": "span 11 / span 11",
         "span-12": "span 12 / span 12",
       },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            fontWeight: 400,
-            fontFamily: theme("fontFamily.sans").join(", "),
-            color: theme("colors.gray.900"),
-            "h1, h2, h3, h4, h5, h6, blockquote": {
-              fontWeight: 400,
-              color: theme("colors.gray.900"),
-              strong: {
-                color: theme("colors.gray.900"),
-              },
-            },
-            ol: {
-              li: {
-                "&:before": { color: theme("colors.gray.900") },
-              },
-            },
-            ul: {
-              li: {
-                "&:before": { backgroundColor: theme("colors.gray.900") },
-              },
-            },
-            blockquote: {
-              borderColor: theme("colors.gray.400"),
-              p: {
-                color: theme("colors.gray.600"),
-              },
-            },
-            p: {
-              margin: theme("margin.0"),
-              img: {
-                marginTop: theme("margin.2"),
-              },
-              span: {
-                display: "list-item",
-                listStylePosition: "inside",
-              },
-            },
-          },
-        },
-      }),
     },
     fontFamily: {
       sans: ["Noto Sans", "sans-serif"],
@@ -89,5 +48,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [],
 };

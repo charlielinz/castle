@@ -3,6 +3,7 @@ import Footer from "../../components/Footer";
 import { getFrontmatter, getContent, getPostPaths } from "../../posts/info";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import { components } from "../../posts/components";
 
 const Postpage = ({
   slug,
@@ -29,20 +30,10 @@ const Postpage = ({
               />
             </div>
             <ReactMarkdown
-              className="prose p-4 lg:min-w-full lg:col-start-1 lg:col-end-4 "
-              components={{
-                img({ src, title }) {
-                  return (
-                    <>
-                      <span className="text-sm">{title}</span>
-                      <img src={src} className="inline w-auto lg:h-64" />
-                    </>
-                  );
-                },
-              }}
-            >
-              {content}
-            </ReactMarkdown>
+              className="prose p-4 lg:min-w-full lg:col-start-1 lg:col-end-4"
+              children={content}
+              components={components}
+            />
           </div>
         </div>
       </header>
