@@ -15,7 +15,7 @@ const P = ({ children }) => {
 const Img = ({ src, title }) => {
   return (
     <>
-      {title && <span className="text-sm list-item list-inside pb-2 pl-1 text-gray-700">{title}</span>}
+      {title && <span className="text-sm list-item list-inside py-2 pl-1 text-gray-700">{title}</span>}
       <img src={src} className="inline w-auto p-1 lg:h-72" />
     </>
   );
