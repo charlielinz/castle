@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       zIndex: {
         "-10": "-10",
+        "-100": "-100"
       },
       spacing: {
         66: "16.5rem",

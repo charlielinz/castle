@@ -25,7 +25,7 @@ const Post = ({ postinfos }) => {
               </p>
               <p className="pb-4">Traveled in {post.frontmatter.date}</p>
               <span className="text-sm bg-gray-200 py-1 px-3 rounded-md lg:hover:bg-gray-300 lg:hover:font-extrabold lg:transition lg:duration-300">
-                <Link href={`/blog/${post.slug}`}>
+                <Link href={`/blog/${post.slug}`} passHref>
                   <a>Read more...</a>
                 </Link>
               </span>
