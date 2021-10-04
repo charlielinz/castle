@@ -120,7 +120,7 @@ const HomeView = () => {
           <h1 className="py-16 text-4xl lg:py-28">Skills</h1>
         </div>
         <div className="flex flex-col flex-wrap mx-auto lg:flex-row lg:justify-center">
-          <div className="lg:w-1/3 lg:flex lg:items-stretch">
+          <div className="lg:w-1/2 lg:flex lg:items-stretch">
             <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
               <div className="h-12 w-12">
                 <i className="fab fa-python text-5xl text-yellow-400" />
@@ -136,7 +136,7 @@ const HomeView = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/3 lg:flex lg:items-stretch">
+          <div className="lg:w-1/2 lg:flex lg:items-stretch">
             <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
               <div className="h-12 w-12">
                 <i className="fab fa-html5 text-5xl text-yellow-600" />
@@ -152,7 +152,7 @@ const HomeView = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/3 lg:flex lg:items-stretch">
+          <div className="lg:w-1/2 lg:flex lg:items-stretch">
             <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
               <div className="h-12 w-12">
                 <i className="fab fa-css3-alt text-5xl text-blue-600" />
@@ -182,6 +182,23 @@ const HomeView = () => {
                     />
                   </div>
                   tailwindcss.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:w-1/2 lg:flex lg:items-stretch">
+            <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
+              <div className="h-12 w-12">
+                <i className="fab fa-js text-5xl text-yellow-300 " />
+              </div>
+              <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-5">
+                <p className="text-xl font-extrabold">Javascript</p>
+              </div>
+              <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-5">
+                <p>
+                  On client side we got HTML and CSS, but still need some
+                  Javascript to make it lively. I use React + Next.js for my
+                  first option. React easy to learn and Next.js help me handle routing.
                 </p>
               </div>
             </div>
