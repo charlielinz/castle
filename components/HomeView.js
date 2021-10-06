@@ -120,7 +120,7 @@ const HomeView = () => {
           <h1 className="py-16 text-4xl lg:py-28">Skills</h1>
         </div>
         <div className="flex flex-col flex-wrap mx-auto lg:flex-row lg:justify-center">
-          <div className="lg:w-1/2 lg:flex lg:items-stretch">
+          <div className="lg:w-1/3 lg:flex lg:items-stretch">
             <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
               <div className="h-12 w-12">
                 <i className="fab fa-python text-5xl text-yellow-400" />
@@ -136,7 +136,7 @@ const HomeView = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 lg:flex lg:items-stretch">
+          <div className="lg:w-1/3 lg:flex lg:items-stretch">
             <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
               <div className="h-12 w-12">
                 <i className="fab fa-html5 text-5xl text-yellow-600" />
@@ -152,7 +152,7 @@ const HomeView = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 lg:flex lg:items-stretch">
+          <div className="lg:w-1/3 lg:flex lg:items-stretch">
             <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
               <div className="h-12 w-12">
                 <i className="fab fa-css3-alt text-5xl text-blue-600" />
@@ -186,7 +186,7 @@ const HomeView = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 lg:flex lg:items-stretch">
+          <div className="lg:w-1/3 lg:flex lg:items-stretch">
             <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-4 lg:px-8 lg:m-4">
               <div className="h-12 w-12">
                 <i className="fab fa-js text-5xl text-yellow-300 " />

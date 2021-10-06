@@ -5,9 +5,7 @@ const CodeProjectHolder = () => {
   return (
     <header className="bg-gray-50 font-san text-gray-900">
       <div className="max-w-sm mx-auto px-8 pt-20 pb-12 flex justify-center lg:max-w-screen-lg lg:px-4 lg:py-28">
-        <p className="text-3xl lg:font-black lg:text-4xl">
-          Learn from me.
-        </p>
+        <p className="text-3xl lg:font-black lg:text-4xl">Learn from me.</p>
       </div>
       <div className="max-w-sm mx-auto px-8 pt-12 pb-12 lg:max-w-screen-lg lg:px-4 lg:py-28">
         <div className="grid grid-flow-row grid-cols-13 grid-rows-2 lg:mx-6 lg:pb-4">
@@ -30,6 +28,19 @@ const CodeProjectHolder = () => {
               className="rounded-sm"
             />
           </div>
+        </div>
+        <div className="lg:mx-6 lg:mt-4 mt-4 text-sm lg:text-lg">
+          <ul className="lg:mx-1">
+            <li className="list-item list-inside list-disc lg:py-1">
+              Easy to do automation testing on mobile apps.
+            </li>
+            <li className="list-item list-inside list-disc lg:py-1">
+              Using Appium framework: can drive iOS, Android and Windows apps.
+            </li>
+            <li className="list-item list-inside list-disc lg:py-1">
+              Export a HTML report with details after testing is done.
+            </li>
+          </ul>
         </div>
       </div>
     </header>
