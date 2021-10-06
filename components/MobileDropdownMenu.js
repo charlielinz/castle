@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const MobileDropdownMenu = ({ isOpened, setIsOpened }) => {
+const MobileDropdownMenu = ({ isOpened, setIsOpened, recitalList }) => {
   return (
     <div
       className={
@@ -38,36 +38,21 @@ const MobileDropdownMenu = ({ isOpened, setIsOpened }) => {
           </span>
         </li>
         <ul className="px-4 py-2">
-          <li className="px-2 py-2 text-base rounded-sm">
-            <span onClick={() => setIsOpened(false)}>
-              <Link href="/record#piano-solo-recital">
-                <a>
-                  <p>2019.06.18</p>
-                  <p>Piano Recital</p>
-                </a>
-              </Link>
-            </span>
-          </li>
-          <li className="px-2 py-2 text-base rounded-sm">
-            <span onClick={() => setIsOpened(false)}>
-              <Link href="/record#chamber-music-recital-1">
-                <a>
-                  <p>2018.06.23</p>
-                  <p>Chamber Music Recital</p>
-                </a>
-              </Link>
-            </span>
-          </li>
-          <li className="px-2 py-2 text-base rounded-sm">
-            <span onClick={() => setIsOpened(false)}>
-              <Link href="/record#chamber-music-recital-2">
-                <a>
-                  <p>2018.06.03</p>
-                  <p>Chamber Music Recital</p>
-                </a>
-              </Link>
-            </span>
-          </li>
+          <span onClick={() => setIsOpened(false)}>
+            {recitalList.map((recital, index) => {
+              const recitalHref = "/record#" + `${recital.hash}`;
+              return (
+                <li className="px-2 py-2 text-base rounded-sm">
+                  <Link href={recitalHref}>
+                    <a>
+                      <p>{recital.date}</p>
+                      <p>{recital.title}</p>
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
+          </span>
         </ul>
       </ul>
     </div>

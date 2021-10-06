@@ -1,14 +1,16 @@
 import Link from "next/link";
 import { useState } from "react";
+import useWindowWidth from "../hooks/useWindowWidth";
 import InvisibleHorizon from "./InvisibleHorizon";
 import WebDropdownMenu from "./WebDropdownMenu";
-import useWindowWidth from "../hooks/useWindowWidth";
 import MobileDropdownMenu from "./MobileDropdownMenu";
+import recitals from "../jsons/recitals.json"
 
 const Navbar = () => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
   const windowWidth = useWindowWidth();
+  const recitalList = recitals.recitals
   return (
     <>
       <nav id="fakeNav" className="h-2 bg-gray-50 lg:h-4"></nav>
@@ -68,6 +70,7 @@ const Navbar = () => {
                   <WebDropdownMenu
                     isOpened={isOpened}
                     setIsOpened={setIsOpened}
+                    recitalList={recitalList}
                   />
                 </li>
               </>
@@ -85,6 +88,7 @@ const Navbar = () => {
                   <MobileDropdownMenu
                     isOpened={isOpened}
                     setIsOpened={setIsOpened}
+                    recitalList={recitalList}
                   />
                   <button
                     className={
