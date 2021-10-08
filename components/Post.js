@@ -10,7 +10,7 @@ const Post = ({ postinfos }) => {
         </p>
         <div className="flex flex-wrap justify-center gap-8 mt-24">
           {postinfos.map((post, index) => (
-            <div className="bg-gray-100 p-4 rounded-md shadow-md">
+            <div className="bg-gray-100 p-4 rounded-md shadow-md" key={index}>
               <div className="relative h-56 w-72 lg:h-64 lg:w-80">
                 <Image
                   src={post.frontmatter.cover_image}
