@@ -16,7 +16,7 @@ const WebDropDownMenu = ({ isOpened, setIsOpened, recitalList }) => {
         {recitalList.map((recital, index) => {
           const recitalHref = "/record#" + `${recital.hash}`;
           return (
-            <li className="px-2 py-1 rounded-sm hover:bg-gray-100">
+            <li className="px-2 py-1 rounded-sm hover:bg-gray-100" key={index}>
               <Link href={recitalHref}>
                 <a>
                   <p>{recital.date}</p>

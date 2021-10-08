@@ -12,6 +12,10 @@ const P = ({ children }) => {
   return <p className="py-2">{children}</p>;
 };
 
+const A = ({ children, href }) => {
+  return <a className="text-indigo-700 transform duration-300 hover:text-opacity-70" href={href} target="_blank">{children}</a>
+}
+
 const Img = ({ src, title }) => {
   return (
     <>
@@ -25,4 +29,5 @@ export const components = {
   blockquote: BlockQuote,
   p: P,
   img: Img,
+  a: A
 };

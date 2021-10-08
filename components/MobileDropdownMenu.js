@@ -38,21 +38,21 @@ const MobileDropdownMenu = ({ isOpened, setIsOpened, recitalList }) => {
           </span>
         </li>
         <ul className="px-4 py-2">
-          <span onClick={() => setIsOpened(false)}>
-            {recitalList.map((recital, index) => {
-              const recitalHref = "/record#" + `${recital.hash}`;
-              return (
-                <li className="px-2 py-2 text-base rounded-sm">
+          {recitalList.map((recital, index) => {
+            const recitalHref = "/record#" + `${recital.hash}`;
+            return (
+              <li className="px-2 py-2 text-base rounded-sm" key={index}>
+                <span onClick={() => setIsOpened(false)}>
                   <Link href={recitalHref}>
                     <a>
                       <p>{recital.date}</p>
                       <p>{recital.title}</p>
                     </a>
                   </Link>
-                </li>
-              );
-            })}
-          </span>
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </ul>
     </div>
