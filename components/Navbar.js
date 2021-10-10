@@ -41,7 +41,7 @@ const Navbar = () => {
             {windowWidth > 1024 ? (
               <>
                 <li className="py-6">
-                  <span className="mr-3 px-4 py-3 text-lg text-orange-700 bg-orange-200 rounded-2xl transition-all duration-300 hover:text-white hover:bg-orange-400">
+                  <span className="mr-3 px-4 py-3 text-lg text-truegray-700 bg-truegray-200 rounded-2xl transition-all duration-300 hover:text-white hover:bg-truegray-400">
                     <Link href="/contact">
                       <a>Contact me</a>
                     </Link>

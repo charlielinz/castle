@@ -54,6 +54,11 @@ const MobileDropdownMenu = ({ isOpened, setIsOpened, recitalList }) => {
             );
           })}
         </ul>
+        <li className="flex p-2 text-xl rounded-sm text-truegray-600">
+          <Link href="/contact">
+            <a className="bg-truegray-200 px-4 py-1 rounded-lg">Contact me</a>
+          </Link>
+        </li>
       </ul>
     </div>
   );
