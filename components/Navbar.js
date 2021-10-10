@@ -41,14 +41,21 @@ const Navbar = () => {
             {windowWidth > 1024 ? (
               <>
                 <li className="py-6">
-                  <span className="px-2 text-sm border-b border-gray-50 lg:text-lg lg:px-4 lg:py-1 hover:border-b hover:border-gray-400">
+                  <span className="mr-3 px-4 py-3 text-lg text-orange-700 bg-orange-200 rounded-2xl transition-all duration-300 hover:text-white hover:bg-orange-400">
+                    <Link href="/contact">
+                      <a>Contact me</a>
+                    </Link>
+                  </span>
+                </li>
+                <li className="py-6">
+                  <span className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400">
                     <Link href="/blog/posts">
                       <a>Blog</a>
                     </Link>
                   </span>
                 </li>
                 <li className="py-6">
-                  <span className="px-2 text-sm border-b border-gray-50 lg:text-lg lg:px-4 lg:py-1 hover:border-b hover:border-gray-400">
+                  <span className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400">
                     <Link href="/code">
                       <a>Code hub</a>
                     </Link>
@@ -60,7 +67,7 @@ const Navbar = () => {
                   onClick={() => setIsOpened(false)}
                 >
                   <span
-                    className="mr-1 px-2 text-sm border-b border-gray-50 lg:text-lg lg:mr-0 lg:px-4 lg:py-1 hover:border-b hover:border-gray-400"
+                    className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400"
                     onMouseEnter={() => setIsOpened(true)}
                   >
                     <Link href="/record">

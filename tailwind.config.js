@@ -1,4 +1,5 @@
 const { list } = require("postcss");
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   mode: "jit",
@@ -32,6 +33,11 @@ module.exports = {
         "span-11": "span 11 / span 11",
         "span-12": "span 12 / span 12",
       },
+      colors: {
+        "orange": colors.orange,
+        "truegray": colors.trueGray,
+        "warmgray": colors.warmGray
+      }
     },
     fontFamily: {
       sans: ["Noto Sans", "sans-serif"],
