@@ -8,7 +8,7 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let data = {
+    const data = {
       name,
       email,
       message,
