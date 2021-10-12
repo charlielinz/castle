@@ -1,17 +1,18 @@
 // import nodemailer from "nodemailer";
 import sgMail from "@sendgrid/mail";
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-// const transporter = nodemailer.createTransport({
-//   port: 465,
-//   host: "smtp.gmail.com",
-//   auth: {
-//     user: process.env.account,
-//     pass: process.env.password,
-//   },
-//   secure: true,
-// });
+const transporter = nodemailer.createTransport({
+  port: 465,
+  host: "smtp.gmail.com",
+  auth: {
+    user: process.env.account,
+    pass: process.env.password,
+  },
+  secure: true,
+  tls: {
+    ciphers: "SSLv3",
+  },
+});
 
 const sendEmail = async (body) => {
   const mailOptions = {
