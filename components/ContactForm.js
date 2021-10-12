@@ -93,8 +93,8 @@ const ContactForm = () => {
           </div>
           <input
             type="submit"
-            value="Submit"
-            className="rounded-lg py-2 w-4/5 lg:w-1/2 hover:bg-truegray-200 transition duration-300 focus:outline-none"
+            value="Send it!"
+            className="appearance-none rounded-lg py-2 w-4/5 lg:w-1/2 hover:bg-truegray-200 transition duration-300 focus:outline-none cursor-pointer"
             onClick={(e) => {
               handleSubmit(e);
             }}
