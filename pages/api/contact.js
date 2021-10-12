@@ -8,17 +8,20 @@ const transporter = nodemailer.createTransport({
     pass: process.env.password,
   },
   secure: true,
+  tls: {
+    ciphers: "SSLv3",
+  },
 });
 
 const sendEmail = async (body) => {
-  const mailData = {
+  const mailOptions = {
     to: "charlielin.org@gmail.com",
     subject: `Message From ${body.name}`,
     text: body.message + " | Sent from: " + body.email,
     html: `<div>${body.message}</div><p>Sent from:
       ${body.email}</p>`,
   };
-  transporter.sendMail(mailData, function (err, info) {
+  transporter.sendMail(mailOptions, function (err, info) {
     if (err) console.log(err);
     else console.log(info);
   });
