@@ -1,5 +1,5 @@
 export default async function (req, res) {
-  let nodemailer = require("nodemailer");
+  const nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
