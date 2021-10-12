@@ -8,9 +8,6 @@ const transporter = nodemailer.createTransport({
     pass: process.env.password,
   },
   secure: true,
-  tls: {
-    ciphers: "SSLv3",
-  },
 });
 
 const sendEmail = async (body) => {
