@@ -10,6 +10,19 @@ const transporter = nodemailer.createTransport({
   secure: true,
 });
 
+await new Promise((resolve, reject) => {
+  // verify connection configuration
+  transporter.verify(function (error, success) {
+      if (error) {
+          console.log(error);
+          reject(error);
+      } else {
+          console.log("Server is ready to take our messages");
+          resolve(success);
+      }
+  });
+});
+
 const sendEmail = async (body) => {
   const mailData = {
     to: "charlielin.org@gmail.com",
