@@ -1,5 +1,4 @@
-// import nodemailer from "nodemailer";
-import sgMail from "@sendgrid/mail";
+import nodemailer from "nodemailer";
 
 const transporter = nodemailer.createTransport({
   port: 465,
@@ -9,28 +8,20 @@ const transporter = nodemailer.createTransport({
     pass: process.env.password,
   },
   secure: true,
-  tls: {
-    ciphers: "SSLv3",
-  },
 });
 
 const sendEmail = async (body) => {
-  const mailOptions = {
-    from: "ilovealinlin@gmail.com",
+  const mailData = {
     to: "charlielin.org@gmail.com",
     subject: `Message From ${body.name}`,
     text: body.message + " | Sent from: " + body.email,
     html: `<div>${body.message}</div><p>Sent from:
       ${body.email}</p>`,
   };
-  sgMail
-    .send(mailOptions)
-    .then(() => {
-      console.log("Email sent");
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  transporter.sendMail(mailData, function (err, info) {
+    if (err) console.log(err);
+    else console.log(info);
+  });
 };
 
 const handler = async (req, res) => {
