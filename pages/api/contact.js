@@ -33,10 +33,8 @@ const sendEmail = async (body) => {
 };
 
 const handler = async (req, res) => {
-  if (req.method === "POST") {
-    const emailRes = await sendEmail(req.body);
-    return res.status(200).json({ message: `Email sent successfuly` });
-  }
+  const emailRes = await sendEmail(req.body);
+  return res.status(200).json({ message: `Email sent successfuly` });
 };
 
 export default handler;
