@@ -1,5 +1,5 @@
 const { list } = require("postcss");
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   mode: "jit",
@@ -7,14 +7,14 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./hooks/**/*.{js,ts,jsx,tsx}",
-    "./posts/**/*.{js,ts,jsx,tsx}",    
+    "./posts/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       zIndex: {
         "-10": "-10",
-        "-100": "-100"
+        "-100": "-100",
       },
       spacing: {
         66: "16.5rem",
@@ -34,10 +34,10 @@ module.exports = {
         "span-12": "span 12 / span 12",
       },
       colors: {
-        "orange": colors.orange,
-        "truegray": colors.trueGray,
-        "warmgray": colors.warmGray
-      }
+        orange: colors.orange,
+        truegray: colors.trueGray,
+        warmgray: colors.warmGray,
+      },
     },
     fontFamily: {
       sans: ["Noto Sans", "sans-serif"],
