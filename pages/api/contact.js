@@ -10,20 +10,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
 });
 
-await new Promise((resolve, reject) => {
-  // verify connection configuration
-  transporter.verify(function (error, success) {
-      if (error) {
-          console.log(error);
-          reject(error);
-      } else {
-          console.log("Server is ready to take our messages");
-          resolve(success);
-      }
-  });
-});
-
-const sendEmail = async (body) => {
+const sendEmail = async (body, resolve, reject) => {
   const mailData = {
     to: "charlielin.org@gmail.com",
     subject: `Message From ${body.name}`,
@@ -32,13 +19,20 @@ const sendEmail = async (body) => {
       ${body.email}</p>`,
   };
   transporter.sendMail(mailData, function (err, info) {
-    if (err) console.log(err);
-    else console.log(info);
+    if (err) {
+      console.error(err);
+      reject(err);
+    } else {
+      console.log(info);
+      resolve(info);
+    }
   });
 };
 
 const handler = async (req, res) => {
-  const emailRes = await sendEmail(req.body);
+  await new Promise((resolve, reject) => {
+    sendEmail(req.body,resolve, reject);
+  });
   return res.status(200).json({ message: `Email sent successfuly` });
 };
 

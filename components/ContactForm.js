@@ -53,7 +53,7 @@ const ContactForm = () => {
           <></>
         )}
         <form className="text-lg flex flex-col items-center gap-4 pt-8 lg:text-xl lg:pt-0">
-          <formgroup className="flex flex-col w-4/5 lg:w-1/2">
+          <div className="flex flex-col w-4/5 lg:w-1/2">
             <label htmlFor="name">Name</label>
             <input
               type="text"
@@ -65,8 +65,8 @@ const ContactForm = () => {
                 setName(e.target.value);
               }}
             />
-          </formgroup>
-          <formgroup className="flex flex-col w-4/5 lg:w-1/2">
+          </div>
+          <div className="flex flex-col w-4/5 lg:w-1/2">
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -78,8 +78,8 @@ const ContactForm = () => {
                 setEmail(e.target.value);
               }}
             />
-          </formgroup>
-          <formgroup className="flex flex-col w-4/5 lg:w-1/2">
+          </div>
+          <div className="flex flex-col w-4/5 lg:w-1/2">
             <label htmlFor="message">Message</label>
             <textarea
               type="text"
@@ -90,7 +90,7 @@ const ContactForm = () => {
                 setMessage(e.target.value);
               }}
             />
-          </formgroup>
+          </div>
           <input
             type="submit"
             value="Submit"
