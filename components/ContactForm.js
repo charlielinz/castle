@@ -60,7 +60,7 @@ const ContactForm = () => {
               name="name"
               value={name}
               placeholder="Charlie Lin"
-              className="my-2 px-2 py-1"
+              className="my-2 px-2 py-1 focus:outline-none"
               onChange={(e) => {
                 setName(e.target.value);
               }}
@@ -73,7 +73,7 @@ const ContactForm = () => {
               name="email"
               value={email}
               placeholder="example@gmail.com"
-              className="my-2 px-2 py-1"
+              className="my-2 px-2 py-1 focus:outline-none"
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
@@ -85,7 +85,7 @@ const ContactForm = () => {
               type="text"
               name="message"
               value={message}
-              className="my-2 px-2 py-1 h-32"
+              className="my-2 px-2 py-1 h-32 focus:outline-none"
               onChange={(e) => {
                 setMessage(e.target.value);
               }}
@@ -94,7 +94,7 @@ const ContactForm = () => {
           <input
             type="submit"
             value="Submit"
-            className="rounded-lg py-2 w-4/5 lg:w-1/2 hover:bg-truegray-200 transition duration-300"
+            className="rounded-lg py-2 w-4/5 lg:w-1/2 hover:bg-truegray-200 transition duration-300 focus:outline-none"
             onClick={(e) => {
               handleSubmit(e);
             }}
