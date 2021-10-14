@@ -1,10 +1,64 @@
 import { useState } from "react";
 
+const EmailValidation = (email) => {
+  const mail_format = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+  if (email.value.match(mail_format)) {
+    alert("Valid email address!");
+    return true;
+  } else {
+    alert("Invalid email address!");
+    return false;
+  }
+};
+
 const ContactForm = () => {
+  const hint = {
+    success: {title: "Succeed!", text: "Email is sent successfully."},
+    failure: {title: "Warning!", text: "Make sure you enter all fields."}
+  }
+
   const [name, setName] = useState("");
+  const [nameIsValid, setNameIsValid] = useState(true);
   const [email, setEmail] = useState("");
+  const [emailIsValid, setEmailIsValid] = useState(true);
   const [message, setMessage] = useState("");
+  const [messageIsValid, setMessageIsValid] = useState(true);
   const [submit, setSubmit] = useState(false);
+  const [hintMessage, setHintMessage] = useState(hint.success)
+
+
+  const handleName = (e) => {
+    const value = e.target.value;
+    setName(value);
+    if (value) {
+      setNameIsValid(true);
+    } else {
+      setNameIsValid(false);
+    }
+  };
+
+  const handleEmail = (e) => {
+    const value = e.target.value;
+    setEmail(value);
+    const email_pattern =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (value.match(email_pattern)) {
+      setEmailIsValid(true);
+    } else {
+      setEmailIsValid(false);
+    }
+  };
+
+  const handleMessage = (e) => {
+    const value = e.target.value;
+    setMessage(value);
+    if (value) {
+      setMessageIsValid(true);
+    } else {
+      setMessageIsValid(false);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -13,23 +67,27 @@ const ContactForm = () => {
       email,
       message,
     };
-
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      console.log(res);
-      if (res.status === 200) {
-        setSubmit(true);
-        setName("");
-        setEmail("");
-        setMessage("");
-      }
-    });
+    if (nameIsValid && emailIsValid && messageIsValid) {
+      fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((res) => {
+        console.log(res);
+        if (res.status === 200) {
+          setSubmit(true);
+          setName("");
+          setEmail("");
+          setMessage("");
+        }
+      });
+    }else{
+      setSubmit(true)
+      setHintMessage(hint.failure)
+    }
   };
   return (
     <header className="bg-gray-50 font-san text-gray-900">
@@ -45,8 +103,8 @@ const ContactForm = () => {
             onClick={() => setSubmit(false)}
           >
             <div className="p-8">
-              <p className="text-2xl">Succeed!</p>
-              <p className="pt-4">Email is sent successfully.</p>
+              <p className="text-2xl">{hintMessage.title}</p>
+              <p className="pt-4">{hintMessage.text}</p>
             </div>
           </div>
         ) : (
@@ -59,12 +117,20 @@ const ContactForm = () => {
               type="text"
               name="name"
               value={name}
-              placeholder="Charlie Lin"
-              className="my-2 px-2 py-1 focus:outline-none"
+              placeholder="ex: Charlie Lin"
+              className={
+                nameIsValid
+                  ? "mt-2 mb-1 px-2 py-2 rounded-sm focus:outline-none"
+                  : "mt-2 mb-1 px-2 py-2 rounded-sm focus:outline-none border border-red-500"
+              }
               onChange={(e) => {
-                setName(e.target.value);
+                handleName(e);
               }}
+              onClick={() => setNameIsValid(false)}
             />
+            <p className="ml-1 text-sm text-red-500">
+              {nameIsValid ? "" : "Name is required."}
+            </p>
           </div>
           <div className="flex flex-col w-4/5 lg:w-1/2">
             <label htmlFor="email">Email</label>
@@ -72,12 +138,20 @@ const ContactForm = () => {
               type="email"
               name="email"
               value={email}
-              placeholder="example@gmail.com"
-              className="my-2 px-2 py-1 focus:outline-none"
+              placeholder="ex: example@gmail.com"
+              className={
+                emailIsValid
+                  ? "mt-2 mb-1 px-2 py-2 rounded-sm focus:outline-none"
+                  : "mt-2 mb-1 px-2 py-2 rounded-sm focus:outline-none border border-red-500"
+              }
               onChange={(e) => {
-                setEmail(e.target.value);
+                handleEmail(e);
               }}
+              onClick={() => setEmailIsValid(false)}
             />
+            <p className="ml-1 text-sm text-red-500">
+              {emailIsValid ? "" : "Please enter a valid email."}
+            </p>
           </div>
           <div className="flex flex-col w-4/5 lg:w-1/2">
             <label htmlFor="message">Message</label>
@@ -85,11 +159,19 @@ const ContactForm = () => {
               type="text"
               name="message"
               value={message}
-              className="my-2 px-2 py-1 h-32 focus:outline-none"
+              className={
+                messageIsValid
+                  ? "mt-2 mb-1 px-2 py-2 h-32 rounded-sm focus:outline-none"
+                  : "mt-2 mb-1 px-2 py-2 h-32 rounded-sm focus:outline-none border border-red-500"
+              }
               onChange={(e) => {
-                setMessage(e.target.value);
+                handleMessage(e);
               }}
+              onClick={() => setMessageIsValid(false)}
             />
+            <p className="ml-1 text-sm text-red-500">
+              {messageIsValid ? "" : "Message is required."}
+            </p>
           </div>
           <input
             type="submit"
@@ -99,6 +181,7 @@ const ContactForm = () => {
               handleSubmit(e);
             }}
           />
+          <p></p>
         </form>
       </div>
       <div
