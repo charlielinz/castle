@@ -8,13 +8,10 @@ const ContactForm = () => {
   };
 
   const [name, setName] = useState("");
-  const [nameState, setNameState] = useState(false);
   const [nameIsValid, setNameIsValid] = useState(true);
   const [email, setEmail] = useState("");
-  const [emailState, setEmailState] = useState(false);
   const [emailIsValid, setEmailIsValid] = useState(true);
   const [message, setMessage] = useState("");
-  const [messageState, setMessageState] = useState(false);
   const [messageIsValid, setMessageIsValid] = useState(true);
   const [submit, setSubmit] = useState(false);
   const [hintMessage, setHintMessage] = useState(hint.success);
@@ -129,9 +126,8 @@ const ContactForm = () => {
               onClick={() => setNameIsValid(true)}
               onBlur={
                 name
-                  ? () => setNameState(true)
+                  ? () => {}
                   : () => {
-                      setNameState(false);
                       setNameIsValid(false);
                     }
               }
@@ -159,9 +155,8 @@ const ContactForm = () => {
               onClick={() => setEmailIsValid(true)}
               onBlur={
                 email
-                  ? () => setEmailState(true)
+                  ? () => {}
                   : () => {
-                      setEmailState(false);
                       setEmailIsValid(false);
                     }
               }
@@ -188,13 +183,11 @@ const ContactForm = () => {
               onClick={() => setMessageIsValid(true)}
               onBlur={
                 message
-                  ? () => setMessageState(true)
+                  ? () => {}
                   : () => {
-                      setMessageState(false);
                       setMessageIsValid(false);
                     }
               }
-
             />
             <p className="ml-1 text-sm text-red-500">
               {messageIsValid ? "" : "Message is required."}
