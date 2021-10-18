@@ -154,7 +154,7 @@ const ContactForm = () => {
               }}
               onClick={() => setEmailIsValid(true)}
               onBlur={
-                email
+                email && emailIsValid
                   ? () => {}
                   : () => {
                       setEmailIsValid(false);
