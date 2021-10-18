@@ -1,15 +1,5 @@
 import { useState } from "react";
-
-const EmailValidation = (email) => {
-  const mail_format = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-  if (email.value.match(mail_format)) {
-    alert("Valid email address!");
-    return true;
-  } else {
-    alert("Invalid email address!");
-    return false;
-  }
-};
+import { boolean } from "yup";
 
 const ContactForm = () => {
   const hint = {
@@ -18,10 +8,13 @@ const ContactForm = () => {
   };
 
   const [name, setName] = useState("");
+  const [nameState, setNameState] = useState(false);
   const [nameIsValid, setNameIsValid] = useState(true);
   const [email, setEmail] = useState("");
+  const [emailState, setEmailState] = useState(false);
   const [emailIsValid, setEmailIsValid] = useState(true);
   const [message, setMessage] = useState("");
+  const [messageState, setMessageState] = useState(false);
   const [messageIsValid, setMessageIsValid] = useState(true);
   const [submit, setSubmit] = useState(false);
   const [hintMessage, setHintMessage] = useState(hint.success);
@@ -66,7 +59,14 @@ const ContactForm = () => {
       email,
       message,
     };
-    if (nameIsValid && emailIsValid && messageIsValid && name && email && message) {
+    if (
+      nameIsValid &&
+      emailIsValid &&
+      messageIsValid &&
+      name &&
+      email &&
+      message
+    ) {
       fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -126,7 +126,15 @@ const ContactForm = () => {
               onChange={(e) => {
                 handleName(e);
               }}
-              onClick={() => setNameIsValid(false)}
+              onClick={() => setNameIsValid(true)}
+              onBlur={
+                name
+                  ? () => setNameState(true)
+                  : () => {
+                      setNameState(false);
+                      setNameIsValid(false);
+                    }
+              }
             />
             <p className="ml-1 text-sm text-red-500">
               {nameIsValid ? "" : "Name is required."}
@@ -148,7 +156,15 @@ const ContactForm = () => {
               onChange={(e) => {
                 handleEmail(e);
               }}
-              onClick={() => setEmailIsValid(false)}
+              onClick={() => setEmailIsValid(true)}
+              onBlur={
+                email
+                  ? () => setEmailState(true)
+                  : () => {
+                      setEmailState(false);
+                      setEmailIsValid(false);
+                    }
+              }
             />
             <p className="ml-1 text-sm text-red-500">
               {emailIsValid ? "" : "Please enter a valid email."}
@@ -169,7 +185,16 @@ const ContactForm = () => {
               onChange={(e) => {
                 handleMessage(e);
               }}
-              onClick={() => setMessageIsValid(false)}
+              onClick={() => setMessageIsValid(true)}
+              onBlur={
+                message
+                  ? () => setMessageState(true)
+                  : () => {
+                      setMessageState(false);
+                      setMessageIsValid(false);
+                    }
+              }
+
             />
             <p className="ml-1 text-sm text-red-500">
               {messageIsValid ? "" : "Message is required."}
