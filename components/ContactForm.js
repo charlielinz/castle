@@ -13,9 +13,9 @@ const EmailValidation = (email) => {
 
 const ContactForm = () => {
   const hint = {
-    success: {title: "Succeed!", text: "Email is sent successfully."},
-    failure: {title: "Warning!", text: "Make sure you enter all fields."}
-  }
+    success: { title: "Succeed!", text: "Email is sent successfully." },
+    failure: { title: "Warning!", text: "Make sure you enter all fields." },
+  };
 
   const [name, setName] = useState("");
   const [nameIsValid, setNameIsValid] = useState(true);
@@ -24,8 +24,7 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
   const [messageIsValid, setMessageIsValid] = useState(true);
   const [submit, setSubmit] = useState(false);
-  const [hintMessage, setHintMessage] = useState(hint.success)
-
+  const [hintMessage, setHintMessage] = useState(hint.success);
 
   const handleName = (e) => {
     const value = e.target.value;
@@ -67,7 +66,7 @@ const ContactForm = () => {
       email,
       message,
     };
-    if (nameIsValid && emailIsValid && messageIsValid) {
+    if (nameIsValid && emailIsValid && messageIsValid && name && email && message) {
       fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -84,9 +83,9 @@ const ContactForm = () => {
           setMessage("");
         }
       });
-    }else{
-      setSubmit(true)
-      setHintMessage(hint.failure)
+    } else {
+      setSubmit(true);
+      setHintMessage(hint.failure);
     }
   };
   return (
@@ -118,6 +117,7 @@ const ContactForm = () => {
               name="name"
               value={name}
               placeholder="ex: Charlie Lin"
+              autoComplete="off"
               className={
                 nameIsValid
                   ? "mt-2 mb-1 px-2 py-2 rounded-sm focus:outline-none"
@@ -139,6 +139,7 @@ const ContactForm = () => {
               name="email"
               value={email}
               placeholder="ex: example@gmail.com"
+              autoComplete="off"
               className={
                 emailIsValid
                   ? "mt-2 mb-1 px-2 py-2 rounded-sm focus:outline-none"
@@ -159,6 +160,7 @@ const ContactForm = () => {
               type="text"
               name="message"
               value={message}
+              autoComplete="off"
               className={
                 messageIsValid
                   ? "mt-2 mb-1 px-2 py-2 h-32 rounded-sm focus:outline-none"
