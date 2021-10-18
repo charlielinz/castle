@@ -7,6 +7,10 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Charlie's Castle</title>
+        <meta name="title" content="This is Charlie Lin" />
+        <meta name="description" content="Welcome to my castle" />
+        <meta name="og:title" content="This is Charlie Lin" />
+        <meta name="og:description" content="Welcome to my castle" />
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
           rel="stylesheet"
