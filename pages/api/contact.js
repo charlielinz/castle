@@ -13,8 +13,7 @@ const transporter = nodemailer.createTransport({
 const sendEmail = async (body, resolve, reject) => {
   const mailData = {
     to: "charlielin.org@gmail.com",
-    subject: `Message From ${body.name}`,
-    text: body.message + " | Sent from: " + body.email,
+    subject: `${body.name} want to contact you`,
     html: `<div>${body.message}</div><p>Sent from:
       ${body.email}</p>`,
   };

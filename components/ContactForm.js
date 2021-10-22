@@ -4,7 +4,11 @@ import { boolean } from "yup";
 const ContactForm = () => {
   const hint = {
     success: { title: "Succeed!", text: "Email is sent successfully." },
-    failure: { title: "Warning!", text: "Make sure you enter all fields." },
+    hasEmptyFields: {
+      title: "Warning!",
+      text: "Make sure you enter all fields.",
+    },
+    emailIsNotValid: { title: "Warning!", text: "Email is not valid." },
   };
 
   const [name, setName] = useState("");
@@ -80,9 +84,12 @@ const ContactForm = () => {
           setMessage("");
         }
       });
-    } else {
+    } else if (name == false || email == false || message == false) {
       setSubmit(true);
-      setHintMessage(hint.failure);
+      setHintMessage(hint.hasEmptyFields);
+    } else if (emailIsValid == false) {
+      setSubmit(true);
+      setHintMessage(hint.emailIsNotValid);
     }
   };
   return (

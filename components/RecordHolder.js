@@ -15,7 +15,7 @@ export const recitals = {
         {
           id: 2,
           name: "Beethoven: Piano Sonata in A-flat Major, Op.26",
-          url: "https://www.youtube-nocookie.com/embed/FxwB1xpeN5k"
+          url: "https://www.youtube-nocookie.com/embed/ziTu5MGuFMQ"
         },
         {
           id: 3,
