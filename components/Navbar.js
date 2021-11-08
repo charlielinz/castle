@@ -4,7 +4,7 @@ import useWindowWidth from "../hooks/useWindowWidth";
 import InvisibleHorizon from "./InvisibleHorizon";
 import WebDropdownMenu from "./WebDropdownMenu";
 import MobileDropdownMenu from "./MobileDropdownMenu";
-import { recitals } from "../components/RecordHolder"
+import { recitals } from "../components/RecordHolder";
 
 const Navbar = () => {
   const [isIntersecting, setIsIntersecting] = useState(false);
@@ -41,13 +41,6 @@ const Navbar = () => {
             {windowWidth > 1024 ? (
               <>
                 <li className="py-6">
-                  <span className="mr-3 px-4 py-3 text-lg text-truegray-700 bg-truegray-200 rounded-2xl transition-all duration-300 hover:text-white hover:bg-truegray-400">
-                    <Link href="/contact">
-                      <a>Contact me</a>
-                    </Link>
-                  </span>
-                </li>
-                <li className="py-6">
                   <span className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400">
                     <Link href="/blog/posts">
                       <a>Blog</a>
@@ -79,6 +72,13 @@ const Navbar = () => {
                     setIsOpened={setIsOpened}
                     recitalList={recitalList}
                   />
+                </li>
+                <li className="py-6">
+                  <span className="mr-3 px-4 py-3 text-lg text-truegray-700 bg-truegray-200 rounded-2xl transition-all duration-300 hover:text-white hover:bg-truegray-400">
+                    <Link href="/contact">
+                      <a>Contact me</a>
+                    </Link>
+                  </span>
                 </li>
               </>
             ) : (

@@ -61,11 +61,17 @@ const HomeView = () => {
           <div className="flex-wrap items-center lg:flex">
             <div className="flex w-full px-8 lg:w-1/2 lg:pl-28">
               <div className="relative w-24">
-                <Image src={citiesocialLogo} alt="citiesocial logo" />
+                <a href="https://www.citiesocial.com/" target="_blank">
+                  <Image src={citiesocialLogo} alt="citiesocial logo" />
+                </a>
               </div>
               <div className="py-4 px-8 w-60">
                 <p className="text-xl font-extrabold">QA Specialist</p>
-                <p className="pt-2">citiesocial</p>
+                <p className="pt-2">
+                  <a href="https://www.citiesocial.com/" target="_blank">
+                    citiesocial
+                  </a>
+                </p>
               </div>
             </div>
             <div className="flex pl-12 py-2 lg:w-1/2">
@@ -79,11 +85,17 @@ const HomeView = () => {
           <div className="flex-wrap items-center lg:flex">
             <div className="flex w-full px-8 lg:w-1/2 lg:pl-28">
               <div className="relative w-24 px-4 pt-4">
-                <Image src={iiiLogo} alt="iii logo" />
+                <a href="https://www.iii.org.tw/" target="_blank">
+                  <Image src={iiiLogo} alt="iii logo" />
+                </a>
               </div>
               <div className="py-4 px-8 w-60">
                 <p className="text-xl font-extrabold">Associate Planner</p>
-                <p className="pt-2">III</p>
+                <p className="pt-2">
+                  <a href="https://www.iii.org.tw/" target="_blank">
+                    III
+                  </a>
+                </p>
               </div>
             </div>
             <div className="flex px-12 py-2 lg:w-1/2">
@@ -98,11 +110,17 @@ const HomeView = () => {
           <div className="flex-wrap items-center lg:flex">
             <div className="flex w-full px-8 lg:w-1/2 lg:pl-28">
               <div className="relative w-24 p-4">
-                <Image src={moldex3dLogo} alt="moldex3d logo" />
+                <a href="https://ch.moldex3d.com/" target="_blank">
+                  <Image src={moldex3dLogo} alt="moldex3d logo" />
+                </a>
               </div>
               <div className="py-4 px-8 w-60">
                 <p className="text-xl font-extrabold">QA Engineer</p>
-                <p className="pt-2">Moldex3D</p>
+                <p className="pt-2">
+                  <a href="https://ch.moldex3d.com/" target="_blank">
+                    Moldex3D
+                  </a>
+                </p>
               </div>
             </div>
             <div className="flex px-12 py-2 lg:w-1/2">
@@ -198,7 +216,8 @@ const HomeView = () => {
                 <p>
                   On client side we got HTML and CSS, but still need some
                   Javascript to make it lively. I use React + Next.js for my
-                  first option. React easy to learn and Next.js help me handle routing.
+                  first option. React easy to learn and Next.js help me handle
+                  routing.
                 </p>
               </div>
             </div>
