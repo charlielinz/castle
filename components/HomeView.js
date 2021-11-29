@@ -79,6 +79,7 @@ const HomeView = () => {
                 <li>App & Web QA</li>
                 <li>Manual functional & UI/UX testing</li>
                 <li>Appium automaion testing with Python</li>
+                <li>Load testing with Locust in Python</li>
               </ul>
             </div>
           </div>
@@ -190,7 +191,7 @@ const HomeView = () => {
                       objectFit="contain"
                     />
                   </div>
-                  bootstrap as my CSS framework, now I'm using
+                  Bootstrap as my CSS framework, now I'm using
                   <div className="relative w-4 h-4 inline-block transform translate-y-0.5 ml-1 mr-0.5">
                     <Image
                       src={tailwindcssLogo}
@@ -199,7 +200,7 @@ const HomeView = () => {
                       objectFit="contain"
                     />
                   </div>
-                  tailwindcss.
+                  TailwindCSS.
                 </div>
               </div>
             </div>

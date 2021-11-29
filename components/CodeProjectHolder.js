@@ -9,11 +9,10 @@ const CodeProjectHolder = () => {
       </div>
       <div className="max-w-sm mx-auto px-8 pt-12 pb-12 lg:max-w-screen-lg lg:px-4 lg:py-28">
         <div className="grid grid-flow-row grid-cols-13 grid-rows-2 lg:mx-6 lg:pb-4">
-          <span className="fas fa-robot text-2xl mt-3 ml-1 pt-0.5 lg:text-8xl lg:row-span-2 lg:col-span-2"></span>
-          <h1 className="text-2xl col-start-2 col-end-13 mt-3 ml-5 lg:text-4xl lg:font-extrabold lg:col-start-3 lg:col-end-13 lg:mt-4 lg:ml-1">
+          <h1 className="text-2xl col-start-1 col-end-13 mt-3 lg:text-5xl lg:font-extrabold lg:col-start-1 lg:col-end-13 lg:mt-4">
             Imiter
           </h1>
-          <p className="text-sm text-gray-600 col-start-1 col-end-13 ml-1 mb-2 lg:text-lg lg:col-start-3 lg:col-end-13 lg:mt-3">
+          <p className="text-sm text-gray-600 col-start-1 col-end-13 mb-2 lg:text-lg lg:col-start-1 lg:col-end-13 lg:mt-3">
             To test your apps with emulator automaticlly.
           </p>
         </div>
@@ -39,6 +38,9 @@ const CodeProjectHolder = () => {
             </li>
             <li className="list-item list-inside list-disc lg:py-1">
               Export a HTML report with details after testing is done.
+            </li>
+            <li className="list-item list-inside list-disc lg:py-1">
+              Self-made element-selector parser.
             </li>
           </ul>
         </div>
