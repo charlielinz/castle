@@ -9,7 +9,7 @@ const MessageForm = () => {
   } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => {
-    fetch("/api/contact", {
+    fetch("/api/mailer", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -17,7 +17,7 @@ const MessageForm = () => {
       },
       body: JSON.stringify(data),
     }).then(() => {
-      isSubmitSuccessful ? reset({ name: "", email: "", message: "" }) : null;
+      isSubmitSuccessful && reset({ name: "", email: "", message: "" });
     });
   };
 
