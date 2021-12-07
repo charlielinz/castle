@@ -49,8 +49,8 @@ const Navbar = () => {
                 </li>
                 <li className="py-6">
                   <span className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400">
-                    <Link href="/code">
-                      <a>Code hub</a>
+                    <Link href="/code_hub">
+                      <a>Code Hub</a>
                     </Link>
                   </span>
                 </li>
@@ -63,7 +63,7 @@ const Navbar = () => {
                     className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400"
                     onMouseEnter={() => setIsOpened(true)}
                   >
-                    <Link href="/record">
+                    <Link href="/music_hall">
                       <a>Music Hall</a>
                     </Link>
                   </span>

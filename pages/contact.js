@@ -1,15 +1,14 @@
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import MessageForm from "../components/MessageForm";
-import Footer from "../components/Footer";
 
-const contact = () => {
+const Contact = () => {
+  const slogan = "Contact me."
   return (
     <>
-      <Navbar />
+      <Header slogan={slogan} />
       <MessageForm />
-      <Footer />
     </>
   );
 };
 
-export default contact;
+export default Contact;

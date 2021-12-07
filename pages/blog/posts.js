@@ -1,14 +1,13 @@
-import Navbar from "../../components/Navbar";
+import Header from "../../components/Header";
 import Post from "../../components/Post";
-import Footer from "../../components/Footer";
 import { getPostInfos } from "../../posts/info";
 
 const Posts = ({ postInfos }) => {
+  const slogan = "Travel with me.";
   return (
     <>
-      <Navbar />
+      <Header slogan={slogan}/>
       <Post postinfos={postInfos} />
-      <Footer />
     </>
   );
 };

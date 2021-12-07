@@ -1,15 +1,7 @@
-import Navbar from "../components/Navbar";
 import HomeView from "../components/HomeView";
-import Footer from "../components/Footer";
 
-const Home = () => {
-  return (
-    <>
-      <Navbar />
-      <HomeView />
-      <Footer />
-    </>
-  );
+const Index = () => {
+  return <HomeView />;
 };
 
-export default Home;
+export default Index;
