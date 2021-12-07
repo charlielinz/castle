@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Layout from "../components/Layout";
 import "tailwindcss/tailwind.css";
 import "../styles/global.css";
 
@@ -42,7 +43,9 @@ function MyApp({ Component, pageProps }) {
           }}
         />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

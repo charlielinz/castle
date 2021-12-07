@@ -1,15 +1,7 @@
-import Navbar from "../components/Navbar";
 import MessageForm from "../components/MessageForm";
-import Footer from "../components/Footer";
 
-const contact = () => {
-  return (
-    <>
-      <Navbar />
-      <MessageForm />
-      <Footer />
-    </>
-  );
+const Contact = () => {
+  return <MessageForm />;
 };
 
-export default contact;
+export default Contact;
