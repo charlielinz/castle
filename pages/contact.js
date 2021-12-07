@@ -1,7 +1,14 @@
+import Header from "../components/Header";
 import MessageForm from "../components/MessageForm";
 
 const Contact = () => {
-  return <MessageForm />;
+  const slogan = "Contact me."
+  return (
+    <>
+      <Header slogan={slogan} />
+      <MessageForm />
+    </>
+  );
 };
 
 export default Contact;

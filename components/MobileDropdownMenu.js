@@ -25,21 +25,21 @@ const MobileDropdownMenu = ({ isOpened, setIsOpened, recitalList }) => {
         </li>
         <li className="flex p-2 text-xl rounded-sm">
           <span className="w-full" onClick={() => setIsOpened(false)}>
-            <Link href="/code" className="w-full">
+            <Link href="/code_hub" className="w-full">
               <a>Code Hub</a>
             </Link>
           </span>
         </li>
         <li className="flex p-2 text-xl rounded-sm">
           <span className="w-full" onClick={() => setIsOpened(false)}>
-            <Link href="/record">
+            <Link href="/music_hall">
               <a>Music Hall</a>
             </Link>
           </span>
         </li>
         <ul className="px-4 py-2">
           {recitalList.map((recital, index) => {
-            const recitalHref = "/record#" + `${recital.hash}`;
+            const recitalHref = "/music_hall#" + `${recital.hash}`;
             return (
               <li className="px-2 py-2 text-base rounded-sm" key={index}>
                 <span onClick={() => setIsOpened(false)}>
@@ -55,9 +55,11 @@ const MobileDropdownMenu = ({ isOpened, setIsOpened, recitalList }) => {
           })}
         </ul>
         <li className="flex p-2 text-xl rounded-sm text-truegray-600">
-          <Link href="/contact">
-            <a className="bg-truegray-200 px-4 py-1 rounded-lg">Contact me</a>
-          </Link>
+          <span className="w-full" onClick={() => setIsOpened(false)}>
+            <Link href="/contact">
+              <a className="bg-truegray-200 px-4 py-1 rounded-lg">Contact me</a>
+            </Link>
+          </span>
         </li>
       </ul>
     </div>
