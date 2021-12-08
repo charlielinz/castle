@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const MobileDropdownMenu = ({ isOpened, setIsOpened, recitalList }) => {
+const MobileNavDropdown = ({ isOpened, setIsOpened, recitalList }) => {
   return (
     <div
       className={
@@ -66,4 +66,4 @@ const MobileDropdownMenu = ({ isOpened, setIsOpened, recitalList }) => {
   );
 };
 
-export default MobileDropdownMenu;
+export default MobileNavDropdown;

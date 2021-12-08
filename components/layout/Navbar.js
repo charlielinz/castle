@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useState } from "react";
-import useWindowWidth from "../hooks/useWindowWidth";
-import InvisibleHorizon from "./InvisibleHorizon";
-import WebDropdownMenu from "./WebDropdownMenu";
-import MobileDropdownMenu from "./MobileDropdownMenu";
-import { recitals } from "../components/RecordHolder";
+import useWindowWidth from "../../hooks/useWindowWidth";
+import InvisibleHorizon from "../navigation/InvisibleHorizon";
+import WebDropdownMenu from "../navigation/WebDropdownMenu";
+import MobileDropdownMenu from "../navigation/MobileNavDropdown";
+import { recitals } from "../contents/RecordHolder";
 
 const Navbar = () => {
   const [isIntersecting, setIsIntersecting] = useState(false);

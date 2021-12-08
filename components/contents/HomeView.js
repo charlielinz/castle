@@ -1,10 +1,10 @@
 import Image from "next/image";
-import selfie from "../public/img/selfie.png";
-import citiesocialLogo from "../public/img/citiesocial-logo.svg";
-import iiiLogo from "../public/img/iii-logo.svg";
-import moldex3dLogo from "../public/img/moldex3d-logo.svg";
-import bootstrapLogo from "../public/img/bootstrap-logo.png";
-import tailwindcssLogo from "../public/img/tailwindcss-logo.svg";
+import selfie from "../../public/img/selfie.png";
+import citiesocialLogo from "../../public/img/citiesocial-logo.svg";
+import iiiLogo from "../../public/img/iii-logo.svg";
+import moldex3dLogo from "../../public/img/moldex3d-logo.svg";
+import bootstrapLogo from "../../public/img/bootstrap-logo.png";
+import tailwindcssLogo from "../../public/img/tailwindcss-logo.svg";
 
 const HomeView = () => {
   return (
