@@ -1,4 +1,8 @@
-const Navigation = ({ isOpened }) => {
+import Link from "next/link";
+import RecitalList from "../contents/RecitalList";
+
+const Navigation = ({ isOpened, setIsOpened }) => {
+  const dropdownCssString = "px-2 py-1 rounded-sm hover:bg-gray-100"
   return (
     <>
       <li className="py-6">
@@ -28,11 +32,20 @@ const Navigation = ({ isOpened }) => {
             <a>Music Hall</a>
           </Link>
         </span>
-        <WebDropdownMenu
-          isOpened={isOpened}
-          setIsOpened={setIsOpened}
-          recitalList={recitalList}
-        />
+        <div
+          className="absolute transform -translate-x-56 mt-6 text-base w-1/3"
+          onMouseLeave={() => setIsOpened(false)}
+        >
+          <ul
+            className={
+              isOpened
+                ? "flex flex-col gap-4 p-4 bg-white rounded-lg shadow-md transition duration-700 opacity-100"
+                : "invisible p-4 bg-white rounded-lg shadow-md transition duration-700 opacity-0"
+            }
+          >
+            <RecitalList className={dropdownCssString} />
+          </ul>
+        </div>
       </li>
       <li className="py-6">
         <span className="mr-3 px-4 py-3 text-lg text-truegray-700 bg-truegray-200 rounded-2xl transition-all duration-300 hover:text-white hover:bg-truegray-400">

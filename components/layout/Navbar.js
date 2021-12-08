@@ -2,9 +2,9 @@ import Link from "next/link";
 import { useState } from "react";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import InvisibleHorizon from "../navigation/InvisibleHorizon";
-import WebDropdownMenu from "../navigation/WebDropdownMenu";
-import MobileDropdownMenu from "../navigation/MobileNavDropdown";
-import { recitals } from "../contents/RecordHolder";
+import Navigation from "../navigation/Navigation";
+import MobileNavigation from "../navigation/MobileNavigation";
+import { recitals } from "../contents/RecitalList";
 
 const Navbar = () => {
   const [isIntersecting, setIsIntersecting] = useState(false);
@@ -39,74 +39,9 @@ const Navbar = () => {
               </span>
             </li>
             {windowWidth > 1024 ? (
-              <>
-                <li className="py-6">
-                  <span className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400">
-                    <Link href="/blog/posts">
-                      <a>Blog</a>
-                    </Link>
-                  </span>
-                </li>
-                <li className="py-6">
-                  <span className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400">
-                    <Link href="/code_hub">
-                      <a>Code Hub</a>
-                    </Link>
-                  </span>
-                </li>
-                <li
-                  className="py-6 "
-                  onMouseLeave={() => setIsOpened(false)}
-                  onClick={() => setIsOpened(false)}
-                >
-                  <span
-                    className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400"
-                    onMouseEnter={() => setIsOpened(true)}
-                  >
-                    <Link href="/music_hall">
-                      <a>Music Hall</a>
-                    </Link>
-                  </span>
-                  <WebDropdownMenu
-                    isOpened={isOpened}
-                    setIsOpened={setIsOpened}
-                    recitalList={recitalList}
-                  />
-                </li>
-                <li className="py-6">
-                  <span className="mr-3 px-4 py-3 text-lg text-truegray-700 bg-truegray-200 rounded-2xl transition-all duration-300 hover:text-white hover:bg-truegray-400">
-                    <Link href="/contact">
-                      <a>Contact me</a>
-                    </Link>
-                  </span>
-                </li>
-              </>
+              <Navigation isOpened={isOpened} setIsOpened={setIsOpened} />
             ) : (
-              <>
-                <li className="mr-3">
-                  <a
-                    className={
-                      isOpened
-                        ? "relative z-50 fas fa-stream px-4 py-2 text-xl text-gray-700 bg-gray-50 rounded-md transform duration-700 "
-                        : "fas fa-stream px-4 py-2 text-xl text-gray-700"
-                    }
-                    onClick={() => setIsOpened(!isOpened)}
-                  />
-                  <MobileDropdownMenu
-                    isOpened={isOpened}
-                    setIsOpened={setIsOpened}
-                    recitalList={recitalList}
-                  />
-                  <button
-                    className={
-                      isOpened
-                        ? "z-20 fixed bg-black h-full w-full top-0 bottom-0 left-0 right-0 opacity-60 transform duration-300 cursor-default"
-                        : "z-20 invisible fixed bg-black h-full w-full top-0 bottom-0 left-0 right-0 opacity-0 transform duration-300 cursor-default"
-                    }
-                    onClick={() => setIsOpened(false)}
-                  ></button>
-                </li>
-              </>
+              <MobileNavigation isOpened={isOpened} setIsOpened={setIsOpened} />
             )}
           </ul>
         </div>
