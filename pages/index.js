@@ -1,4 +1,4 @@
-import HomeView from "../components/HomeView";
+import HomeView from "../components/contents/HomeView";
 
 const Index = () => {
   return <HomeView />;

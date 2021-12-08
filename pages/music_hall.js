@@ -1,5 +1,5 @@
-import Header from "../components/Header";
-import RecordHolder from "../components/RecordHolder";
+import Header from "../components/layout/Header";
+import RecordHolder from "../components/contents/RecordHolder";
 
 const MusicHall = () => {
   const slogan = "Listen to me.";

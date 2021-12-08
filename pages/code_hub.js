@@ -1,5 +1,5 @@
-import Header from "../components/Header";
-import CodeProjectHolder from "../components/CodeProjectHolder";
+import Header from "../components/layout/Header";
+import CodeProjectHolder from "../components/contents/CodeProjectHolder";
 
 const CodeHub = () => {
   const slogan = "Learn from me."

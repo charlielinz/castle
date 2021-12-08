@@ -1,4 +1,4 @@
-import Programs from "./Programs";
+import Link from "next/link";
 
 export const recitals = {
   recitals: [
@@ -86,33 +86,25 @@ export const recitals = {
   ],
 };
 
-const RecordHolder = () => {
+const RecitalList = ({ className }) => {
   const recitalList = recitals.recitals;
   return (
     <>
       {recitalList.map((recital, index) => {
+        const recitalHref = "/music_hall#" + `${recital.hash}`;
         return (
-          <>
-            <div
-              key={index}
-              id={recital.hash}
-              className="max-w-sm mx-auto pt-16 px-8 lg:pt-10 lg:flex lg:gap-4 lg:max-w-screen-lg lg:px-8"
-            >
-              <p className="text-lg font-bold lg:text-2xl lg:font-bold">
-                {recital.date}
-              </p>
-              <p className="text-lg font-bold lg:text-2xl lg:font-bold">
-                {recital.title}
-              </p>
-            </div>
-            <div className="max-w-sm mx-auto pt-4 pb-8 px-8 lg:max-w-screen-lg lg:px-8">
-              <Programs key={index} programs={recital.programs} />
-            </div>
-          </>
+          <li className={className} key={index}>
+            <Link href={recitalHref}>
+              <a>
+                <p>{recital.date}</p>
+                <p>{recital.title}</p>
+              </a>
+            </Link>
+          </li>
         );
       })}
     </>
   );
 };
 
-export default RecordHolder;
+export default RecitalList;
