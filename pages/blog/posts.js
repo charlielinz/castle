@@ -1,5 +1,5 @@
 import Header from "../../components/layout/Header";
-import Post from "../../components/Post";
+import Post from "../../components/contents/Post";
 import { getPostInfos } from "../../posts/info";
 
 const Posts = ({ postInfos }) => {

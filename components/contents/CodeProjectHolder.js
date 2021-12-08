@@ -1,5 +1,5 @@
 import Image from "next/image";
-import imiterReport from "../public/img/imiter-report.png";
+import imiterReport from "../../public/img/imiter-report.png";
 
 const CodeProjectHolder = () => {
   return (
