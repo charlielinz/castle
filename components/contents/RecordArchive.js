@@ -1,11 +1,10 @@
-import Programs from "./Programs";
-import { recitals } from "./RecitalList"
+import YoutubeEmbed from "./YoutubeEmbed"
+import { recitals } from "./RecitalList";
 
-const RecordHolder = () => {
-  const recitalList = recitals.recitals;
+const RecordArchive = () => {
   return (
     <>
-      {recitalList.map((recital, index) => {
+      {recitals.map((recital, index) => {
         return (
           <>
             <div
@@ -21,7 +20,9 @@ const RecordHolder = () => {
               </p>
             </div>
             <div className="max-w-sm mx-auto pt-4 pb-8 px-8 lg:max-w-screen-lg lg:px-8">
-              <Programs key={index} programs={recital.programs} />
+              {recital.programs.map((program) => {
+                return <YoutubeEmbed key={program.id} program={program} />;
+              })}
             </div>
           </>
         );
@@ -30,4 +31,4 @@ const RecordHolder = () => {
   );
 };
 
-export default RecordHolder;
+export default RecordArchive;
