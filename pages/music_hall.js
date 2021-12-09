@@ -1,12 +1,12 @@
 import Header from "../components/layout/Header";
-import RecordHolder from "../components/contents/RecordHolder";
+import RecordArchive from "../components/contents/RecordArchive";
 
 const MusicHall = () => {
   const slogan = "Listen to me.";
   return (
     <>
       <Header slogan={slogan} />
-      <RecordHolder />
+      <RecordArchive />
     </>
   );
 };

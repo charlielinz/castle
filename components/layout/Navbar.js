@@ -4,13 +4,11 @@ import useWindowWidth from "../../hooks/useWindowWidth";
 import InvisibleHorizon from "../navigation/InvisibleHorizon";
 import Navigation from "../navigation/Navigation";
 import MobileNavigation from "../navigation/MobileNavigation";
-import { recitals } from "../contents/RecitalList";
 
 const Navbar = () => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
   const windowWidth = useWindowWidth();
-  const recitalList = recitals.recitals;
   return (
     <>
       <nav id="fakeNav" className="h-2 bg-gray-50 lg:h-4"></nav>

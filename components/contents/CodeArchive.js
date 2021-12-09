@@ -1,7 +1,7 @@
 import Image from "next/image";
 import imiterReport from "../../public/img/imiter-report.png";
 
-const CodeProjectHolder = () => {
+const CodeArchive = () => {
   return (
     <div className="max-w-sm mx-auto px-8 py-8 lg:max-w-screen-lg lg:px-4">
       <div className="grid grid-flow-row grid-cols-13 grid-rows-2 lg:mx-6 lg:pb-4">
@@ -44,4 +44,4 @@ const CodeProjectHolder = () => {
   );
 };
 
-export default CodeProjectHolder;
+export default CodeArchive;
