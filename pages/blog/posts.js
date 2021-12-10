@@ -1,4 +1,4 @@
-import Header from "../../components/layout/Header";
+import Header from "../../components/sections/Header";
 import Post from "../../components/contents/Post";
 import { getPostInfos } from "../../posts/info";
 

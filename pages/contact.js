@@ -1,4 +1,4 @@
-import Header from "../components/layout/Header";
+import Header from "../components/sections/Header";
 import MessageForm from "../components/contents/MessageForm";
 
 const Contact = () => {

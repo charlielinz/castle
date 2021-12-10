@@ -1,4 +1,4 @@
-import Header from "../components/layout/Header";
+import Header from "../components/sections/Header";
 import CodeArchive from "../components/contents/CodeArchive";
 
 const CodeHub = () => {
