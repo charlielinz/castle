@@ -37,14 +37,14 @@ const MobileNavigation = ({ isOpened, setIsOpened }) => {
             </li>
             <li className="flex p-2 text-xl rounded-sm">
               <span className="w-full" onClick={() => setIsOpened(false)}>
-                <Link href="/code_hub" className="w-full">
+                <Link href="/code-hub" className="w-full">
                   <a>Code Hub</a>
                 </Link>
               </span>
             </li>
             <li className="flex p-2 text-xl rounded-sm">
               <span className="w-full" onClick={() => setIsOpened(false)}>
-                <Link href="/music_hall">
+                <Link href="/music-hall">
                   <a>Music Hall</a>
                 </Link>
               </span>

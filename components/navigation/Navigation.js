@@ -14,7 +14,7 @@ const Navigation = ({ isOpened, setIsOpened }) => {
       </li>
       <li className="py-6">
         <span className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400">
-          <Link href="/code_hub">
+          <Link href="/code-hub">
             <a>Code Hub</a>
           </Link>
         </span>
@@ -28,7 +28,7 @@ const Navigation = ({ isOpened, setIsOpened }) => {
           className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400"
           onMouseEnter={() => setIsOpened(true)}
         >
-          <Link href="/music_hall">
+          <Link href="/music-hall">
             <a>Music Hall</a>
           </Link>
         </span>
