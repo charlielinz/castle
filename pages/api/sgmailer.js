@@ -4,7 +4,7 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 const sendEmail = (body, resolve, reject) => {
   const mailData = {
-    to: "charlielin.org@gmail.com",
+    to: "contact@charlielin.org",
     from: "ilovealinlin@gmail.com",
     subject: `${body.name} want to contact you`,
     html: `<div>${body.message}</div><p>Sent from:
