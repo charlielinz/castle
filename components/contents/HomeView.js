@@ -102,8 +102,8 @@ const HomeView = () => {
               <ul className="list-minus list-outside">
                 <li>App & Web QA</li>
                 <li>Manual functional & UI/UX testing</li>
-                <li>Appium automaion testing with Python</li>
-                <li>Load testing with Locust in Python</li>
+                <li>Automaion testing using Appium in Python</li>
+                <li>Load testing using Locust in Python</li>
               </ul>
             </div>
           </div>
@@ -150,9 +150,9 @@ const HomeView = () => {
             </div>
             <div className="flex px-12 py-2 lg:w-1/2">
               <ul className="list-minus list-outside">
-                <li>Moldex3D software testing</li>
-                <li>Moldex3D CAE analyst</li>
-                <li>CAD Engineer</li>
+                <li>Moldex3D manual testing</li>
+                <li>Product failures analysis</li>
+                <li>Creating test case with CAD</li>
               </ul>
             </div>
           </div>
