@@ -1,4 +1,6 @@
-import Header from "../../components/sections/Header";
+import Navbar from "../../components/sections/Navbar";
+import Title from "../../components/sections/Title";
+import Footer from "../../components/sections/Footer";
 import Post from "../../components/contents/Post";
 import { getPostInfos } from "../../posts/info";
 
@@ -6,8 +8,10 @@ const Posts = ({ postInfos }) => {
   const slogan = "Travel with me.";
   return (
     <>
-      <Header slogan={slogan}/>
+      <Navbar />
+      <Title slogan={slogan} />
       <Post postinfos={postInfos} />
+      <Footer />
     </>
   );
 };

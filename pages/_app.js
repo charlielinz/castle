@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Navbar from "../components/sections/Navbar";
-import Footer from "../components/sections/Footer";
 import "tailwindcss/tailwind.css";
 import "../styles/global.css";
 
@@ -44,11 +42,9 @@ function MyApp({ Component, pageProps }) {
           }}
         />
       </Head>
-      <Navbar />
       <main className="bg-gray-50 font-san text-gray-900">
         <Component {...pageProps} />
       </main>
-      <Footer />
     </>
   );
 }

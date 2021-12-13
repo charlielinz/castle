@@ -1,4 +1,5 @@
 const { list } = require("postcss");
+const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
@@ -13,6 +14,7 @@ module.exports = {
   theme: {
     extend: {
       zIndex: {
+        100: "100",
         "-10": "-10",
         "-100": "-100",
       },
@@ -38,6 +40,18 @@ module.exports = {
         truegray: colors.trueGray,
         warmgray: colors.warmGray,
       },
+      transformOrigin: {
+        "bottom-center": "bottom center",
+      },
+      animation: {
+        "spin-slow": "spin 2s linear infinite",
+        grow: "grow 1.5s linear infinite",
+      },
+      keyframes: {
+        grow: {
+          "50%": { transform: "scale(1)" },
+        },
+      },
     },
     fontFamily: {
       sans: ["Noto Sans", "sans-serif"],
@@ -55,5 +69,13 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".animate-delay-750": {
+          "animation-delay": "750ms",
+        },
+      });
+    }),
+  ],
 };

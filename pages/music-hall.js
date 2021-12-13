@@ -1,12 +1,16 @@
-import Header from "../components/sections/Header";
+import Navbar from "../components/sections/Navbar";
+import Title from "../components/sections/Title";
+import Footer from "../components/sections/Footer";
 import RecordArchive from "../components/contents/RecordArchive";
 
 const MusicHall = () => {
   const slogan = "Listen to me.";
   return (
     <>
-      <Header slogan={slogan} />
+      <Navbar />
+      <Title slogan={slogan} />
       <RecordArchive />
+      <Footer />
     </>
   );
 };
