@@ -22,8 +22,15 @@ const sendEmail = (body, resolve, reject) => {
 const handler = async (req, res) => {
   await new Promise((resolve, reject) => {
     sendEmail(req.body, resolve, reject);
-  });
-  return res.status(200).json({});
+  })
+    .then((value) => {
+      const statusCode = value[0].statusCode;
+      return res.status(statusCode).json({});
+    })
+    .catch((reason) => {
+      const statusCode = reason[0].statusCode;
+      return res.status(statusCode).json({});
+    });
 };
 
 export default handler;
