@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
 
 const MessageForm = () => {
   const {
@@ -10,19 +9,17 @@ const MessageForm = () => {
   } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => {
-    fetch("/api/sgmailer", {
+    fetch("/api/mailer", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
+    }).then(() => {
+      isSubmitSuccessful && reset({ name: "", email: "", message: "" });
     });
   };
-
-  useEffect(() => {
-    isSubmitSuccessful && reset({ name: "", email: "", message: "" });
-  });
 
   return (
     <div className="max-w-sm mx-auto px-8 pb-8 lg:max-w-screen-lg lg:px-4">
