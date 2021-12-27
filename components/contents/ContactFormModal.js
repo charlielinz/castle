@@ -97,7 +97,7 @@ const ContactFormModal = () => {
                       Any questions or cooperation invitations are welcome.
                     </Dialog.Description>
                     <form
-                      className="text-lg flex flex-col items-start gap-4 pt-8 lg:text-xl lg:pt-8"
+                      className="text-lg flex flex-col items-start gap-4 pt-8 lg:pt-8"
                       onSubmit={handleSubmit(onSubmit)}
                     >
                       <div className="flex flex-col w-full">
