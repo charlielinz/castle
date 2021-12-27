@@ -1,8 +1,9 @@
 import Link from "next/link";
 import RecitalList from "../contents/RecitalList";
+import ContactFormModal from "../contents/ContactFormModal";
 
 const Navigation = ({ isOpened, setIsOpened }) => {
-  const dropdownCssString = "px-2 py-1 rounded-sm hover:bg-gray-100"
+  const dropdownCssString = "px-2 py-1 rounded-sm hover:bg-gray-100";
   return (
     <>
       <li className="py-6">
@@ -48,11 +49,7 @@ const Navigation = ({ isOpened, setIsOpened }) => {
         </div>
       </li>
       <li className="py-6">
-        <span className="mr-3 px-4 py-3 text-lg text-truegray-700 bg-truegray-200 rounded-2xl transition-all duration-300 hover:text-white hover:bg-truegray-400">
-          <Link href="/contact">
-            <a>Contact me</a>
-          </Link>
-        </span>
+        <ContactFormModal />
       </li>
     </>
   );
