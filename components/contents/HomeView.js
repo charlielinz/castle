@@ -163,6 +163,9 @@ const HomeView = () => {
           <h1 className="py-16 text-4xl lg:py-28">Skills</h1>
         </div>
         <div className="flex flex-col flex-wrap mx-auto lg:flex-row lg:justify-center">
+          <button>
+            <span class="material-icons-round text-4xl">arrow_back_ios</span>
+          </button>
           {skills.map((skill, index) => {
             return (
               <div className="lg:w-1/3 lg:flex lg:items-stretch" key={index}>
@@ -180,6 +183,9 @@ const HomeView = () => {
               </div>
             );
           })}
+          <button>
+            <span class="material-icons-round text-4xl">arrow_forward_ios</span>
+          </button>
         </div>
       </div>
     </header>
