@@ -66,7 +66,7 @@ const Post = ({ postinfos }) => {
               }
             >
               {!isLoading && (
-                <Link href={`/blog/${post.slug}`} passHref>
+                <Link href={`/blog/posts/${post.slug}`} passHref>
                   <a>Read more...</a>
                 </Link>
               )}

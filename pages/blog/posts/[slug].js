@@ -1,7 +1,7 @@
-import { getFrontmatter, getContent, getPostPaths } from "../../posts/info";
+import { getFrontmatter, getContent, getPostPaths } from "../../../posts/info";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
-import { components } from "../../posts/components";
+import { components } from "../../../posts/components";
 
 const Postpage = ({
   slug,
