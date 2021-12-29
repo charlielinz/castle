@@ -3,34 +3,9 @@ import selfie from "../../public/img/selfie.png";
 import citiesocialLogo from "../../public/img/citiesocial-logo.svg";
 import iiiLogo from "../../public/img/iii-logo.svg";
 import moldex3dLogo from "../../public/img/moldex3d-logo.svg";
+import Skills from "./Skills";
 
 const HomeView = () => {
-  const skills = [
-    {
-      icon: "fab fa-python text-5xl text-yellow-400",
-      name: "Python",
-      description:
-        "As a self-study programmer, I choose Python to be my primary programming language.",
-    },
-    {
-      icon: "fab fa-html5 text-5xl text-yellow-600",
-      name: "HTML",
-      description:
-        "To organize a nice structure on your page, HTML is a must-have language.",
-    },
-    {
-      icon: "fab fa-css3-alt text-5xl text-blue-600",
-      name: "CSS",
-      description:
-        "CSS is your best friend to get HTML elements dressed. I used to use Bootstrap as my CSS framework, now I'm using TailwindCSS.",
-    },
-    {
-      icon: "fab fa-js text-5xl text-yellow-300",
-      name: "JavaScript",
-      description:
-        "On client side we got HTML and CSS, but still need some Javascript to make it lively. I use React + Next.js for my first option. React easy to learn and Next.js help me handle routing.",
-    },
-  ];
   return (
     <header className="bg-gray-50 font-san text-gray-900">
       <div>
@@ -98,7 +73,7 @@ const HomeView = () => {
                 </p>
               </div>
             </div>
-            <div className="flex pl-12 py-2 lg:w-1/2">
+            <div className="flex px-12 py-2 lg:w-1/2">
               <ul className="list-minus list-outside">
                 <li>App & Web QA</li>
                 <li>Manual functional & UI/UX testing</li>
@@ -162,25 +137,7 @@ const HomeView = () => {
         <div className="flex justify-center">
           <h1 className="py-16 text-4xl lg:py-28">Skills</h1>
         </div>
-        <div className="flex flex-col flex-wrap mx-auto lg:flex-row lg:justify-center">
-          {skills.map((skill, index) => {
-            return (
-              <div className="lg:w-1/3 lg:flex lg:items-stretch" key={index}>
-                <div className="bg-gray-100 rounded-lg grid grid-cols-5 auto-rows-min py-8 px-6 m-2 lg:grid-cols-5 lg:px-8 lg:m-4">
-                  <div className="h-12 w-12">
-                    <i className={skill.icon} />
-                  </div>
-                  <div className="col-start-2 col-end-6 flex items-center ml-1 lg:col-start-2 lg:col-end-6">
-                    <p className="text-xl font-extrabold">{skill.name}</p>
-                  </div>
-                  <div className="col-start-2 col-end-6 mt-3 ml-1 lg:col-start-2 lg:col-end-6">
-                    <p>{skill.description}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <Skills />
       </div>
     </header>
   );
