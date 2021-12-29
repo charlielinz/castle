@@ -53,7 +53,10 @@ const MobileNavigation = ({ isOpened, setIsOpened }) => {
             <ul className="px-4 py-2" onClick={() => setIsOpened(false)}>
               <RecitalList className={dropdownCssString} />
             </ul>
-            <li className="flex py-2 text-xl rounded-sm text-truegray-600" onClick={() => setIsOpened(false)}>
+            <li
+              className="flex py-2 text-xl rounded-sm text-truegray-600"
+              onClick={() => setIsOpened(false)}
+            >
               <ContactFormModal />
             </li>
           </ul>
