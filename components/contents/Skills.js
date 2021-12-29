@@ -60,69 +60,36 @@ const Skills = () => {
           <i className="fas fa-chevron-left" />
         </button>
         {skills.map((skill, index) => {
+          const cardClassName = (index) => {
+            if (index === cardIndexArray(current)[1]) {
+              return "absolute justify-center lg:z-10";
+            } else if (index === cardIndexArray(current)[0]) {
+              return "absolute invisible lg:visible lg:-translate-x-80 lg:scale-75 lg:opacity-75";
+            } else if (index === cardIndexArray(current)[2]) {
+              return "absolute invisible lg:visible lg:translate-x-80 lg:scale-75 lg:opacity-75";
+            } else {
+              return "";
+            }
+          };
           return (
-            <>
-              {index === cardIndexArray(current)[1] && (
-                <div className="absolute justify-center lg:z-10">
-                  <div
-                    className="flex item-stretch w-64 lg:w-80 lg:h-80"
-                    key={index}
-                  >
-                    <div className="bg-gray-100 shadow-md rounded-lg grid grid-cols-5 auto-rows-min p-5 lg:px-6 lg:py-8">
-                      <div className="h-12 w-12">
-                        <i className={skill.icon} />
-                      </div>
-                      <div className="col-start-2 col-end-6 flex items-center ml-1">
-                        <p className="text-xl font-extrabold">{skill.name}</p>
-                      </div>
-                      <div className="col-start-2 col-end-6 mt-3 ml-1">
-                        <p>{skill.description}</p>
-                      </div>
-                    </div>
+            <div className={cardClassName(index)}>
+              <div
+                className="flex item-stretch w-64 lg:w-80 lg:h-80"
+                key={index}
+              >
+                <div className="bg-gray-100 shadow-md rounded-lg grid grid-cols-5 auto-rows-min p-5 lg:px-6 lg:py-8">
+                  <div className="h-12 w-12">
+                    <i className={skill.icon} />
+                  </div>
+                  <div className="col-start-2 col-end-6 flex items-center ml-1">
+                    <p className="text-xl font-extrabold">{skill.name}</p>
+                  </div>
+                  <div className="col-start-2 col-end-6 mt-3 ml-1">
+                    <p>{skill.description}</p>
                   </div>
                 </div>
-              )}
-              {index === cardIndexArray(current)[0] && (
-                <div className="absolute invisible lg:visible lg:-translate-x-80 lg:scale-75 lg:opacity-75">
-                  <div
-                    className="flex item-stretch w-64 lg:w-80 lg:h-80"
-                    key={index}
-                  >
-                    <div className="bg-gray-100 shadow-md rounded-lg grid grid-cols-5 auto-rows-min p-5 lg:px-6 lg:py-8">
-                      <div className="h-12 w-12">
-                        <i className={skill.icon} />
-                      </div>
-                      <div className="col-start-2 col-end-6 flex items-center ml-1">
-                        <p className="text-xl font-extrabold">{skill.name}</p>
-                      </div>
-                      <div className="col-start-2 col-end-6 mt-3 ml-1">
-                        <p>{skill.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              {index === cardIndexArray(current)[2] && (
-                <div className="absolute invisible lg:visible lg:translate-x-80 lg:scale-75 lg:opacity-75">
-                  <div
-                    className="flex item-stretch w-64 lg:w-80 lg:h-80"
-                    key={index}
-                  >
-                    <div className="bg-gray-100 shadow-md rounded-lg grid grid-cols-5 auto-rows-min p-5 lg:px-6 lg:py-8">
-                      <div className="h-12 w-12">
-                        <i className={skill.icon} />
-                      </div>
-                      <div className="col-start-2 col-end-6 flex items-center ml-1">
-                        <p className="text-xl font-extrabold">{skill.name}</p>
-                      </div>
-                      <div className="col-start-2 col-end-6 mt-3 ml-1">
-                        <p>{skill.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </>
+              </div>
+            </div>
           );
         })}
         <button
