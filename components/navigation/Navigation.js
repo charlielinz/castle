@@ -7,14 +7,14 @@ const Navigation = ({ isOpened, setIsOpened }) => {
   return (
     <>
       <li className="py-6">
-        <span className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400">
+        <span className="text-lg px-4 py-1 hover:border-b hover:border-gray-400">
           <Link href="/blog/posts">
             <a>Blog</a>
           </Link>
         </span>
       </li>
       <li className="py-6">
-        <span className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400">
+        <span className="text-lg px-4 py-1 hover:border-b hover:border-gray-400">
           <Link href="/code-hub">
             <a>Code Hub</a>
           </Link>
@@ -26,7 +26,7 @@ const Navigation = ({ isOpened, setIsOpened }) => {
         onClick={() => setIsOpened(false)}
       >
         <span
-          className="border-b border-gray-50 text-lg px-4 py-1 hover:border-b hover:border-gray-400"
+          className="text-lg px-4 py-1 hover:border-b hover:border-gray-400"
           onMouseEnter={() => setIsOpened(true)}
         >
           <Link href="/music-hall">
@@ -34,7 +34,7 @@ const Navigation = ({ isOpened, setIsOpened }) => {
           </Link>
         </span>
         <div
-          className="absolute transform -translate-x-56 mt-6 text-base w-1/3"
+          className="absolute transform -translate-x-56 mt-6 text-base w-1/4"
           onMouseLeave={() => setIsOpened(false)}
         >
           <ul

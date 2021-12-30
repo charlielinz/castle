@@ -9,21 +9,21 @@ const HomeView = () => {
   return (
     <header className="bg-gray-50 font-san text-gray-900">
       <div>
-        <div className="max-w-sm mx-auto px-8 pt-28 pb-8 flex justify-center lg:max-w-screen-lg lg:px-4 lg:py-28">
+        <div className="max-w-sm mx-auto px-8 pt-28 pb-8 flex justify-center lg:max-w-screen-lg lg:justify-start lg:px-12 lg:py-14 xl:px-4 xl:py-20">
           <div>
-            <p className="text-3xl lg:text-6xl lg:mb-4">
+            <p className="text-3xl lg:text-5xl xl:text-6xl">
               Welcome to Charlie's Castle.
             </p>
-            <p className="text-sm pt-2 lg:text-xl text-gray-600">
+            <p className="text-sm pt-2 lg:text-base text-gray-600 xl:text-xl">
               You can find my legacy here, enjoy yourself !
             </p>
           </div>
         </div>
-        <div className="max-w-sm mx-auto px-8 py-16 flex flex-wrap-reverse justify-center items-center border-b border-gray-200 lg:gap-20 lg:max-w-screen-lg lg:px-4">
+        <div className="max-w-sm mx-auto px-8 py-16 flex flex-wrap-reverse justify-center items-center border-b border-gray-200 lg:pb-44 lg:justify-start lg:gap-20 lg:max-w-screen-lg lg:px-12 xl:px-4">
           <div>
-            <h1 className="text-xl">Art & Tech</h1>
+            <h1 className="lg:text-xl">Art & Tech</h1>
             <h1 className="text-xl">Emotional & Rational</h1>
-            <h1 className="text-5xl py-8 lg:text-6xl">Charlie Lin</h1>
+            <h1 className="text-3xl lg:py-4 lg:text-4xl xl:py-8 xl:text-6xl">Charlie Lin</h1>
             <p className="flex mb-1">
               <span className="material-icons mr-2">location_on</span>
               <span>Taipei, Taiwan</span>
@@ -41,7 +41,7 @@ const HomeView = () => {
               <span>Travel, Food, Music</span>
             </p>
           </div>
-          <div className="relative mb-8 h-60 w-60 lg:h-72 lg:w-72 lg:mb-0">
+          <div className="relative visible mb-8 h-60 w-60 lg:absolute lg:invisible lg:h-72 lg:w-72 lg:mb-0">
             <Image
               src={selfie}
               alt="profile pic"

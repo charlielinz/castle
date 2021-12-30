@@ -16,11 +16,11 @@ const Navbar = () => {
       <nav
         className={
           isIntersecting
-            ? "bg-gray-50 sticky top-0 z-10 inset-x-0 font-sans text-gray-900"
+            ? "bg-gray-50 sticky bg-opacity-0 top-0 z-10 inset-x-0 font-sans text-gray-900"
             : "transition-shadow duration-500 shadow-sm bg-gray-50 sticky top-0 z-10 inset-x-0 font-sans text-gray-900"
         }
       >
-        <div className="relative max-w-screen-lg mx-auto">
+        <div className="relative mx-10">
           <ul className="flex justify-end items-center gap-4">
             <li className="mr-auto py-4 px-6">
               <span>
