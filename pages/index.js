@@ -9,7 +9,7 @@ const Index = () => {
     <>
       <Navbar />
       <div className="absolute invisible lg:visible lg:-top-4 lg:opacity-20">
-        <Image src={heroBanner} placeholder="blur" />
+        <Image src={heroBanner} placeholder="blur"/>
       </div>
       <HomeView />
       <Footer />

@@ -19,7 +19,7 @@ const HomeView = () => {
             </p>
           </div>
         </div>
-        <div className="max-w-sm mx-auto px-8 py-16 flex flex-wrap-reverse justify-center items-center border-b border-gray-200 lg:pb-44 lg:justify-start lg:gap-20 lg:max-w-screen-lg lg:px-12 xl:px-4">
+        <div className="max-w-sm mx-auto px-8 py-16 flex flex-wrap-reverse justify-center items-center border-b border-gray-200 lg:pb-44 xl:pb-60 lg:justify-start lg:gap-20 lg:max-w-screen-lg lg:px-12 xl:px-4">
           <div>
             <h1 className="lg:text-xl">Art & Tech</h1>
             <h1 className="text-xl">Emotional & Rational</h1>
