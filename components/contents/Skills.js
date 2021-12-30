@@ -32,10 +32,22 @@ const Skills = () => {
   const length = skills.length;
 
   const nextCard = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
+    setCurrent((current) => {
+      if (current === length - 1) {
+        return 0;
+      } else {
+        return current + 1;
+      }
+    });
   };
   const previousCard = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+    setCurrent((current) => {
+      if (current === 0) {
+        return length - 1;
+      } else {
+        return current - 1;
+      }
+    });
   };
   if (!Array.isArray(skills) || length <= 0) {
     return null;
