@@ -28,35 +28,35 @@ const Skills = () => {
     },
   ];
 
-  const [current, setCurrent] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const length = skills.length;
 
   const nextCard = () => {
-    setCurrent((current) => {
-      if (current === length - 1) {
+    setCurrentIndex((currentIndex) => {
+      if (currentIndex === length - 1) {
         return 0;
       } else {
-        return current + 1;
+        return currentIndex + 1;
       }
     });
   };
   const previousCard = () => {
-    setCurrent((current) => {
-      if (current === 0) {
+    setCurrentIndex((currentIndex) => {
+      if (currentIndex === 0) {
         return length - 1;
       } else {
-        return current - 1;
+        return currentIndex - 1;
       }
     });
   };
 
-  const cardIndexArray = (num) => {
-    if (num === 0) {
-      return [length - 1, num, num + 1];
-    } else if (num === length - 1) {
-      return [num - 1, num, 0];
+  const getCardIndex = (index) => {
+    if (index === 0) {
+      return [length - 1, index, index + 1];
+    } else if (index === length - 1) {
+      return [index - 1, index, 0];
     } else {
-      return [num - 1, num, num + 1];
+      return [index - 1, index, index + 1];
     }
   };
 
@@ -70,12 +70,13 @@ const Skills = () => {
           <i className="fas fa-chevron-left" />
         </button>
         {skills.map((skill, index) => {
+          const cards = getCardIndex(currentIndex);
           const cardClassName = (index) => {
-            if (index === cardIndexArray(current)[1]) {
+            if (index === cards[1]) {
               return "absolute justify-center lg:z-30";
-            } else if (index === cardIndexArray(current)[0]) {
+            } else if (index === cards[0]) {
               return "absolute invisible lg:visible lg:-translate-x-80 lg:scale-75 lg:opacity-75 lg:z-20";
-            } else if (index === cardIndexArray(current)[2]) {
+            } else if (index === cards[2]) {
               return "absolute invisible lg:visible lg:translate-x-80 lg:scale-75 lg:opacity-75 lg:z-20";
             } else {
               return "absolute invisible lg:visible lg:z-10 lg:scale-50 lg:opacity-0";
