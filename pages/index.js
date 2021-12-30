@@ -8,8 +8,8 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      <div className="absolute invisible lg:visible lg:-top-4 lg:opacity-20">
-        <Image src={heroBanner} placeholder="blur"/>
+      <div className="invisible lg:visible lg:-top-4 lg:opacity-20">
+        <Image src={heroBanner} placeholder="blur" layout="fill" objectFit="cover" objectPosition="center" />
       </div>
       <HomeView />
       <Footer />

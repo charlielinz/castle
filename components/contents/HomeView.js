@@ -9,21 +9,21 @@ const HomeView = () => {
   return (
     <header className="bg-gray-50 font-san text-gray-900">
       <div>
-        <div className="max-w-sm mx-auto px-8 pt-28 pb-8 flex justify-center lg:max-w-screen-lg lg:justify-start lg:px-12 lg:py-14 xl:px-4 xl:py-20">
+        <div className="max-w-sm mx-auto px-8 pt-28 pb-8 flex justify-center lg:max-w-screen-lg lg:justify-start lg:px-14 lg:py-20 xl:px-4">
           <div>
-            <p className="text-3xl lg:text-5xl xl:text-6xl">
+            <p className="text-3xl lg:text-6xl">
               Welcome to Charlie's Castle.
             </p>
-            <p className="text-sm pt-2 lg:text-base text-gray-600 xl:text-xl">
+            <p className="text-sm pt-2 text-gray-600 lg:text-xl">
               You can find my legacy here, enjoy yourself !
             </p>
           </div>
         </div>
-        <div className="max-w-sm mx-auto px-8 py-16 flex flex-wrap-reverse justify-center items-center border-b border-gray-200 lg:pb-44 xl:pb-60 lg:justify-start lg:gap-20 lg:max-w-screen-lg lg:px-12 xl:px-4">
+        <div className="max-w-sm mx-auto px-8 py-16 flex flex-wrap-reverse justify-center items-center border-b border-gray-200 lg:pb-44 lg:justify-start lg:gap-20 lg:max-w-screen-lg lg:px-14 xl:px-4">
           <div>
-            <h1 className="lg:text-xl">Art & Tech</h1>
+            <h1 className="text-xl">Art & Tech</h1>
             <h1 className="text-xl">Emotional & Rational</h1>
-            <h1 className="text-3xl lg:py-4 lg:text-4xl xl:py-8 xl:text-6xl">Charlie Lin</h1>
+            <h1 className="text-3xl lg:py-8 lg:text-6xl">Charlie Lin</h1>
             <p className="flex mb-1">
               <span className="material-icons mr-2">location_on</span>
               <span>Taipei, Taiwan</span>
