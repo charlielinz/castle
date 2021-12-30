@@ -49,9 +49,7 @@ const Skills = () => {
       }
     });
   };
-  if (!Array.isArray(skills) || length <= 0) {
-    return null;
-  }
+
   const cardIndexArray = (num) => {
     if (num === 0) {
       return [length - 1, num, num + 1];
