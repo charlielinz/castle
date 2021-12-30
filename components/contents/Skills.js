@@ -62,17 +62,17 @@ const Skills = () => {
         {skills.map((skill, index) => {
           const cardClassName = (index) => {
             if (index === cardIndexArray(current)[1]) {
-              return "absolute justify-center lg:z-10";
+              return "absolute justify-center lg:z-30";
             } else if (index === cardIndexArray(current)[0]) {
-              return "absolute invisible lg:visible lg:-translate-x-80 lg:scale-75 lg:opacity-75";
+              return "absolute invisible lg:visible lg:-translate-x-80 lg:scale-75 lg:opacity-75 lg:z-20";
             } else if (index === cardIndexArray(current)[2]) {
-              return "absolute invisible lg:visible lg:translate-x-80 lg:scale-75 lg:opacity-75";
+              return "absolute invisible lg:visible lg:translate-x-80 lg:scale-75 lg:opacity-75 lg:z-20";
             } else {
-              return "";
+              return "lg:z-10 lg:scale-50";
             }
           };
           return (
-            <div className={cardClassName(index)}>
+            <div className={`${cardClassName(index)} transition-all duration-300`}>
               <div
                 className="flex item-stretch w-64 lg:w-80 lg:h-80"
                 key={index}
