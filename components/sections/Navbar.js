@@ -20,7 +20,7 @@ const Navbar = () => {
             : "transition-shadow duration-500 shadow-sm bg-gray-50 sticky top-0 z-10 inset-x-0 font-sans text-gray-900"
         }
       >
-        <div className="relative mx-10">
+        <div className="relative lg:mx-10">
           <ul className="flex justify-end items-center gap-4">
             <li className="mr-auto py-4 px-6">
               <span>

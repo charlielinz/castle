@@ -38,7 +38,7 @@ const ContactFormModal = () => {
       <button
         type="button"
         onClick={openModal}
-        className="mr-3 px-4 py-3 text-lg text-truegray-700 bg-truegray-200 rounded-2xl lg:transition-all lg:duration-300 hover:text-white hover:bg-truegray-400"
+        className="mr-3 px-4 py-3 text-lg text-neutral-700 bg-neutral-200 rounded-2xl lg:transition-all lg:duration-300 hover:text-white hover:bg-neutral-400"
       >
         Contact me
       </button>
@@ -152,7 +152,7 @@ const ContactFormModal = () => {
                           id="submit-button"
                           type="submit"
                           value="Send it!"
-                          className="appearance-none bg-truegray-300 rounded-lg py-2 mt-2 hover:bg-truegray-200 transition duration-300 focus:outline-none cursor-pointer"
+                          className="appearance-none bg-neutral-300 rounded-lg py-2 mt-2 hover:bg-neutral-200 transition duration-300 focus:outline-none cursor-pointer"
                         />
                       </div>
                     </form>

@@ -78,7 +78,7 @@ const MessageForm = () => {
           <input
             type="submit"
             value="Send it!"
-            className="appearance-none bg-truegray-300 rounded-lg py-2 mt-2 hover:bg-truegray-200 transition duration-300 focus:outline-none cursor-pointer"
+            className="appearance-none bg-neutral-300 rounded-lg py-2 mt-2 hover:bg-neutral-200 transition duration-300 focus:outline-none cursor-pointer"
           />
         </div>
       </form>

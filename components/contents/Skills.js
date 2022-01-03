@@ -84,11 +84,10 @@ const Skills = () => {
           };
           return (
             <div
-              className={`${cardClassName(index)} transition-all duration-300`}
+              className={`${cardClassName(index)} lg:transition-all lg:duration-300`} key={index}
             >
               <div
                 className="flex item-stretch w-64 lg:w-80 lg:h-80"
-                key={index}
               >
                 <div className="bg-gray-100 shadow-md rounded-lg grid grid-cols-5 auto-rows-min p-5 lg:px-6 lg:py-8">
                   <div className="h-12 w-12">

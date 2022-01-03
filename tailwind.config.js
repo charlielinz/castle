@@ -3,7 +3,6 @@ const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
   purge: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -37,8 +36,8 @@ module.exports = {
       },
       colors: {
         orange: colors.orange,
-        truegray: colors.trueGray,
-        warmgray: colors.warmGray,
+        neutral: colors.neutral,
+        stone: colors.stone,
       },
       transformOrigin: {
         "bottom-center": "bottom center",
