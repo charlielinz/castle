@@ -1,6 +1,7 @@
 const { list } = require("postcss");
 const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
+const { setLocale } = require("yup");
 
 module.exports = {
   purge: [
@@ -45,10 +46,38 @@ module.exports = {
       animation: {
         "spin-slow": "spin 2s linear infinite",
         grow: "grow 1.5s linear infinite",
+        "slide-in": "slideIn 2s ease-in-out",
+        "fadein-1500-1700": "fadein 1500ms 1700ms ease-in-out 1 both",
+        "fadein-1500-1900": "fadein 1500ms 1900ms ease-in-out 1 both",
+        "fadein-1500-2100": "fadein 1500ms 2100ms ease-in-out 1 both",
+        "fadein-1500-2300": "fadein 1500ms 2300ms ease-in-out 1 both",
+        "fadein-1500-2500": "fadein 1500ms 2500ms ease-in-out 1 both",
+        "fadein-1500-2700": "fadein 1500ms 2700ms ease-in-out 1 both",
+        "fadein-1500-2900": "fadein 1500ms 2900ms ease-in-out 1 both",
       },
       keyframes: {
         grow: {
           "50%": { transform: "scale(1)" },
+        },
+        slideIn: {
+          from: {
+            position: "relative",
+            "margin-left": "-30px",
+          },
+          to: {
+            position: "relative",
+            "margin-left": "0px",
+          },
+          "0%": {
+            opacity: "10%",
+          },
+          "100%": {
+            opacity: "100%",
+          },
+        },
+        fadein: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
         },
       },
     },

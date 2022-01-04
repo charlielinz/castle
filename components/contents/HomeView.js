@@ -11,33 +11,33 @@ const HomeView = () => {
       <div>
         <div className="max-w-sm mx-auto px-8 pt-28 pb-8 flex justify-center lg:max-w-screen-lg lg:justify-start lg:px-14 lg:py-20 xl:px-4">
           <div>
-            <p className="text-3xl lg:text-6xl">
+            <p className="lg:animate-slide-in text-3xl lg:text-6xl">
               Welcome to Charlie's Castle.
             </p>
-            <p className="text-sm pt-2 text-gray-600 lg:text-xl">
+            <p className="lg:animate-slide-in text-sm pt-2 text-gray-600 lg:text-xl">
               You can find my legacy here, enjoy yourself !
             </p>
           </div>
         </div>
         <div className="max-w-sm mx-auto px-8 py-16 flex flex-wrap-reverse justify-center items-center border-b border-gray-200 lg:pb-44 lg:justify-start lg:gap-20 lg:max-w-screen-lg lg:px-14 xl:px-4">
           <div>
-            <h1 className="text-xl">Art & Tech</h1>
-            <h1 className="text-xl">Emotional & Rational</h1>
-            <h1 className="text-3xl lg:py-8 lg:text-6xl">Charlie Lin</h1>
-            <p className="flex mb-1">
-              <span className="material-icons mr-2">location_on</span>
+            <h1 className="text-xl lg:animate-fadein-1500-1700">Art & Tech</h1>
+            <h1 className="text-xl lg:animate-fadein-1500-1900">Emotional & Rational</h1>
+            <h1 className="text-3xl lg:py-8 lg:text-6xl lg:animate-fadein-1500-2100">Charlie Lin</h1>
+            <p className="flex mb-1 lg:animate-fadein-1500-2300">
+              <span className="material-icons mr-2 ">location_on</span>
               <span>Taipei, Taiwan</span>
             </p>
-            <p className="flex mb-1">
+            <p className="flex mb-1 lg:animate-fadein-1500-2500">
               <span className="material-icons-round mr-2">school</span>
               <span>NTHU PME(Bachelor)</span>
             </p>
-            <p className="flex mb-1">
+            <p className="flex mb-1 lg:animate-fadein-1500-2700">
               <span className="material-icons-round mr-2">school</span>
               <span>NCTU Music Institute(Master)</span>
             </p>
-            <p className="flex mb-1">
-              <span className="material-icons-round mr-2">interests</span>
+            <p className="flex mb-1 lg:animate-fadein-1500-2900">
+              <span className="material-icons-round mr-2 ">interests</span>
               <span>Travel, Food, Music</span>
             </p>
           </div>

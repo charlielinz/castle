@@ -17,7 +17,7 @@ const Navbar = () => {
         className={
           isIntersecting
             ? "bg-gray-50 sticky bg-opacity-0 top-0 z-10 inset-x-0 font-sans text-gray-900"
-            : "transition-shadow duration-500 shadow-sm bg-gray-50 sticky top-0 z-10 inset-x-0 font-sans text-gray-900"
+            : "transition-all duration-700 shadow-md shadow-gray-200/50 bg-gray-50 sticky top-0 z-10 inset-x-0 font-sans text-gray-900"
         }
       >
         <div className="relative lg:mx-10">
