@@ -46,7 +46,7 @@ module.exports = {
       animation: {
         "spin-slow": "spin 2s linear infinite",
         grow: "grow 1.5s linear infinite",
-        "slide-in": "slideIn 2s ease-in-out",
+        "slidein": "slideIn 2s ease-in-out",
         "fadein-1500-1700": "fadein 1500ms 1700ms ease-in-out 1 both",
         "fadein-1500-1900": "fadein 1500ms 1900ms ease-in-out 1 both",
         "fadein-1500-2100": "fadein 1500ms 2100ms ease-in-out 1 both",
