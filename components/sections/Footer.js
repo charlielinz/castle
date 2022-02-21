@@ -10,7 +10,7 @@ const Footer = () => {
         >
         </a>
         <a
-          href="https://www.instagram.com/c5e.castle/"
+          href="https://www.instagram.com/eilrahc.c_/"
           target="_blank"
           rel="noreferrer"
           className="fab fa-instagram text-4xl h-10 w-10 px-0.5 mx-0.5"
